@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            width: 100%;
+        }
+
+        #D014 {
+            width: 100%;
+            height: 100%;
+        }
+        hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+        /*div.row{
+            background-color: black;
+            opacity: 0.8;
+        }
+        p {
+            color: white;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">              <!--RESTORE THIS LATER-->      
+        <!--<h1>DevDiary</h1>-->                            <!--RESTORE THIS LATER-->
+    <!--<div>-->                                                   <!--CHANGE-->
+        <!--<br>-->                                                <!--CHANGE-->
+        <h1 align="center">DevDiary</h1>                    <!--CHANGE-->         
+    </div>
+
+    <div class="container">                                 <!--ADDED-->
+        <div class="row">                                   <!--ADDED-->
+            <div class="col-sm-12">                         <!--ADDED-->
+                <h3><a href="001.html">HOME</a></h3>        <!--ADDED-->
+            </div>                                          <!--ADDED-->
+        </div>                                              <!--ADDED-->
+    </div>                                                  <!--ADDED-->   
+
+    <div class="container"><br><hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Text Editor</h3>
+                <img src="images2/C001.png" id="D001" />
+            </div>
+            <div class="col-sm-6">
+                <h3>ASP.NET, Webforms</h3>
+                <p>(28/07/2019) - I've been looking at the code that I developed for my mini text editor.</p>
+                <p>There are five functions; WORD COUNT, SLANG CONVERTER, WORD FREQ, SEARCH and ANALYSE.</p>
+                <p>They work correctly however I've thought of a way to fix a small problem that the WORD COUNT function used to have.</p>
+                <p>When the paragraph of text is split into a string-array of sentences, an extra empty element is created at the end.</p>
+                <p>I have a new idea on how to improve this and it should make the code more readable.</p>
+                <p>NOTE: Here is a link to the project - <a href="http://www.damienasp.com" target="_blank">Text Editor</a></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Unit Test 01</h3>
+                <img src="images2/C002.png" id="D002" />
+            </div>
+            <div class="col-md-6">
+                <h3>Problem (Word Count Function)</h3>
+                <p>As you can see from the image the paragraph is split by the full stop (".") and this creates five elements hence "senArray.Length = 5". Ideally this should equal four.</p>
+                <p>The last element (senArray[4]) is blank.</p>
+                <p>In the code I used some extra math, to offset the calculations so that the code would work they way I wanted it to but this is a bit convoluted.</p>
+                <p>NOTE - I'm testing this small segment of code in <a href="https://rextester.com/" target="_blank">rextester</a> (an online IDE).</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<br>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Unit Test 02</h3>
+                <img src="images2/C003.png" id="D003" />
+            </div>
+            <div class="col-md-6">
+                <h3>Solution (Word Count Function)</h3>
+                <p>Now I've added some more formatting to the string to get rid of the space in front of the full stop (Replace(". ",".")).</p>
+                <p>text1.Split(splitOn.ToCharArray(), StringSplitOptions.RemoveEmptyEntries.</p>
+                <p>I came accross the line of code above whilst watching videos on PluralSight.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<br>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Unit Test 03</h3>
+                <img src="images2/C004.png" id="D005" />
+            </div>
+            <div class="col-md-6">
+                <h3>Stages (Word Count Function)</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>Stage 1: Remove punctuation and split paragraphs into sentences.</p>
+                <p>Stage 2: Create array to hold number of words in each sentence.</p>
+                <p>Stage 3: For-loop: Go through each sentence. Split sentence by white-space. Count words cumulatively. Store number of words in sentence. Print sentence number and number of words in sentence.</p>
+                <p>Stage 4: Print total nuber of sentences and total number of words in paragraph.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<br>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>GitHub</h3>
+                <img src="images2/C006.png" id="D006" />
+            </div>
+            <div class="col-md-6">
+                <h3>Code Updated and Published</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>I have updated my code and it works correctly.</p>
+                <p>I have updated my GitHub and the screenshot shows most of the code.</p>
+                <p>When the word-count button is clicked, Button1_Click executes.</p>
+                <p>If the input textbox is blank, the user is prompted to type something.</p>
+                <p>Then the four stages described previously are the same.</p>
+                <p>Here is a link to the GitHub code - <a href="https://github.com/damien5215/TextEditor/blob/master/TextEditor080318/Default.aspx.cs" target="_blank">Text Editor GitHub</a></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Method 01</h3>
+                <img src="images2/C007a.png" id="D007" />
+            </div>
+            <div class="col-md-6">
+                <h3>Call Function</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <br>
+                <p>formatStringClass.formatString();</p>
+                <br>
+                <p>In three out of the five functions there is a small block of code that repeats. So I created a class and a method for it.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Method 02</h3>
+                <img src="images2/C007b.png" id="D007" />
+            </div>
+            <div class="col-md-6">
+                <h3>Single Responsibility</h3>
+                <p>I created a class named "formatStringClass" and created a method (formatString).</p>
+                <p>When the funciton is called it recieves a string, gets rid of the punctuaion and then returns it.</p>
+                <p>I did this because of the single responsibilty design principle (SOLID) and because it makes the code easier to read.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>JavaScript and CSS (01)</h3>
+                <img src="images2/C010.png" id="D007" />
+            </div>
+            <div class="col-md-6">
+                <h3>Change Text Colour</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>There are three textboxes in the text editor.</p>
+                <p>If the user types the name of a colour or its hex value, types the string "changeColor" in the search-textbox and clicks on the ANALYSE TEXT button then the colour of the font in all three textboxes gets set to the colour that was entered by the user.</p>
+                <p>I wanted to make this feature hidden because I was just experimenting with Javascript and how it can manipulate CSS.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>JavaScript and CSS (02)</h3>
+                <img src="images2/C011.png" id="D007" />
+            </div>
+            <div class="col-md-6">
+                <h3>inputColor()</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>When the ANALYSE TEXT button is clicked it triggers the inputColor function.</p>
+                <p>If the search textbox (TextBox3) contains the value "changeColor", the text value in the input textbox gets saved to a variable (ccc). This value is also stored in sessionStorage[myKey].</p>
+                <p>The setColor function executes and then the searchbox (TextBox3) is cleared.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>JavaScript and CSS (03)</h3>
+                <img src="images2/C012.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>setColor()</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>The setColor function sets the color of the font in all three of the textboxes to the value that was entered.</p>
+                <p></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>JavaScript and CSS (04)</h3>
+                <img src="images2/C013.png" id="D013" />
+            </div>
+            <div class="col-md-6">
+                <h3>resetColor()</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>When the RESET button is clicked it triggers the JavaScript function.</p>
+                <p>It sets the font colour of the textboxes to "white".</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Project 2</h3>
+                <img src="images2/D001.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>NEXT WEEK</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>Next week I will aim to make a post about my second project and focus on how I used JavaScript and jQuery to change text and images.</p>
+                <p>I will also watch a few videos on JSON and AJAX and think about how to implement in my second project.</p>
+                <p></p>
+                <p></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

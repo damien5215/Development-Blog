@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            width: 100%;
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+        /*div.row{
+            background-color: black;
+            opacity: 0.8;
+        }
+        p {
+            color: white;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <!--RESTORE THIS LATER-->
+        <!--<h1>DevDiary</h1>-->                            <!--RESTORE THIS LATER-->
+        <!--<div>-->                                                   <!--CHANGE-->
+        <!--<br>-->                                                <!--CHANGE-->
+        <h1 align="center">DevDiary</h1>                    <!--CHANGE-->
+    </div>
+
+    <div class="container">
+        <!--ADDED-->
+        <div class="row">
+            <!--ADDED-->
+            <div class="col-sm-12">
+                <!--ADDED-->
+                <h3><a href="001.html">HOME</a></h3>        <!--ADDED-->
+            </div>                                          <!--ADDED-->
+        </div>                                              <!--ADDED-->
+    </div>                                                  <!--ADDED-->
+
+    <div class="container">
+        <br><hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Text Editor</h3>
+                <img src="images2/D001.png" id="D001" />
+            </div>
+            <div class="col-sm-6">
+                <h3>ASP.NET, Webforms</h3>
+                <p>(28/07/2019) - I've been looking at the code that I developed for my mini text editor.</p>
+                <p>There are five functions; WORD COUNT, SLANG CONVERTER, WORD FREQ, SEARCH and ANALYSE.</p>
+                <p>They work correctly however I've thought of a way to fix a small problem that the WORD COUNT function used to have.</p>
+                <p>When the paragraph of text is split into a string-array of sentences, an extra empty element is created at the end.</p>
+                <p>I have a new idea on how to improve this and it should make the code more readable.</p>
+                <p>NOTE: Here is a link to the project - <a href="http://www.damienasp.com" target="_blank">Text EditorZ</a></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<br>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Unit Test 02</h3>
+                <img src="images2/D002b.png" id="D003" />
+            </div>
+            <div class="col-md-6">
+                <h3>Solution (Word Count Function)</h3>
+                <p>Now I've added some more formatting to the string to get rid of the space in front of the full stop (Replace(". ",".")).</p>
+                <p>text1.Split(splitOn.ToCharArray(), StringSplitOptions.RemoveEmptyEntries.</p>
+                <p>I came accross the line of code above whilst watching videos on PluralSight.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<br>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Unit Test 03</h3>
+                <img src="images2/D003.png" id="D005" />
+            </div>
+            <div class="col-md-6">
+                <h3>Stages (Word Count Function)</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>Stage 1: Remove punctuation and split paragraphs into sentences.</p>
+                <p>Stage 2: Create array to hold number of words in each sentence.</p>
+                <p>Stage 3: For-loop: Go through each sentence. Split sentence by white-space. Count words cumulatively. Store number of words in sentence. Print sentence number and number of words in sentence.</p>
+                <p>Stage 4: Print total nuber of sentences and total number of words in paragraph.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Unit Test 03</h3>
+                <img src="images2/D004b.png" id="D005" />
+            </div>
+            <div class="col-md-6">
+                <h3>Stages (Word Count Function)</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>Stage 1: Remove punctuation and split paragraphs into sentences.</p>
+                <p>Stage 2: Create array to hold number of words in each sentence.</p>
+                <p>Stage 3: For-loop: Go through each sentence. Split sentence by white-space. Count words cumulatively. Store number of words in sentence. Print sentence number and number of words in sentence.</p>
+                <p>Stage 4: Print total nuber of sentences and total number of words in paragraph.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<br>-->
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
