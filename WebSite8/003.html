@@ -13,6 +13,10 @@
             width: 100%;
         }
 
+        /*h3{
+            text-align: center;
+        }*/
+
         hr {
             display: block;
             margin-top: 0.5em;
@@ -56,17 +60,17 @@
         <br><hr>
         <div class="row">
             <div class="col-sm-6">
-                <h3>Text Editor</h3>
+                <h3>Project 2: ASP.NET, Webforms (empty)</h3>
                 <img src="images2/D001.png" id="D001" />
             </div>
             <div class="col-sm-6">
-                <h3>ASP.NET, Webforms</h3>
-                <p>(28/07/2019) - I've been looking at the code that I developed for my mini text editor.</p>
-                <p>There are five functions; WORD COUNT, SLANG CONVERTER, WORD FREQ, SEARCH and ANALYSE.</p>
-                <p>They work correctly however I've thought of a way to fix a small problem that the WORD COUNT function used to have.</p>
-                <p>When the paragraph of text is split into a string-array of sentences, an extra empty element is created at the end.</p>
-                <p>I have a new idea on how to improve this and it should make the code more readable.</p>
-                <p>NOTE: Here is a link to the project - <a href="http://www.damienasp.com" target="_blank">Text EditorZ</a></p>
+                <h3>JavaScript + jQuery</h3>
+                <p>(04/08/2019) - I built this application because I want to display some of the code that I wrote for the HackerRank problems that I've solved.</p>
+                <p>The layout is a grid with three columns. One column for buttons, a column for the textbox and the last column is for screenshots of the code.</p>
+                <p>When I started this project I did not know much about JavaScript or jQuery but I had learned that it could change CSS rules.</p>
+                <p>Originally I developed a JavaScript file with a function for each button.</p>
+                <p>When the button is clicked it changes the colour of the button, the text in the textbox and the images that was displayed.</p>
+                <p>NOTE: Here is a link to the project - <a href="http://www.text.damienasp.com/MYHACKERRANKSOLUTIONS.html" target="_blank">PROJECT2</a></p>
             </div>
         </div><br><hr>
     </div>
@@ -76,14 +80,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Unit Test 02</h3>
+                <h3>JavaScript: Button Functions</h3>            
                 <img src="images2/D002b.png" id="D003" />
             </div>
             <div class="col-md-6">
-                <h3>Solution (Word Count Function)</h3>
-                <p>Now I've added some more formatting to the string to get rid of the space in front of the full stop (Replace(". ",".")).</p>
-                <p>text1.Split(splitOn.ToCharArray(), StringSplitOptions.RemoveEmptyEntries.</p>
-                <p>I came accross the line of code above whilst watching videos on PluralSight.</p>
+                <h3>Change images and text</h3>  
+                <p>As you can see from the screenshot, when a button is clicked a function is called and it changes the image and the text.</p>
+                <p>The imgFadeIn() function then called a function which let the image fade in.</p>
+                <p>The JavaScript changed the image and text but after looking at the source code I do not think I got the imgFadeIn() function to work as desired.</p>
+                <p> This lead me to look into jQuery in order to perform basic animations.</p>
+                <p>NOTE: Here is a link to the full JavaScript code - <a href="https://github.com/damien5215/HackerRank-Code/blob/master/WebSite8/ExternalJavaScript.js" target="_blank">JAVASCRIPT</a></p>
             </div>
         </div><br><hr>
     </div>
@@ -93,16 +99,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Unit Test 03</h3>
+                <h3>jQuery: 3 string arrays</h3>
                 <img src="images2/D003.png" id="D005" />
             </div>
             <div class="col-md-6">
-                <h3>Stages (Word Count Function)</h3>
+                <h3>Button IDs, URLs and Text</h3>
                 <!--<img src="images2/C004.png" id="D004" />-->
-                <p>Stage 1: Remove punctuation and split paragraphs into sentences.</p>
-                <p>Stage 2: Create array to hold number of words in each sentence.</p>
-                <p>Stage 3: For-loop: Go through each sentence. Split sentence by white-space. Count words cumulatively. Store number of words in sentence. Print sentence number and number of words in sentence.</p>
-                <p>Stage 4: Print total nuber of sentences and total number of words in paragraph.</p>
+                <p>The first array "buttonNum" contains a number of strings.</p>
+                <p>These strings are the names of the button ID's of all the buttons in the HTML file.</p>
+                <p>The second array contains the URLs for all of the image files.</p>
+                <p>The third array contains all of the text for the text-box.</p>
+                <p>NOTE: Here is a link to the full jQuery code - <a href="https://github.com/damien5215/HackerRank-Code/blob/master/WebSite8/ExternalJquery.js" target="_blank">JQUERY</a></p>
             </div>
         </div><br><hr>
     </div>
@@ -110,16 +117,277 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Unit Test 03</h3>
+                <h3>jQuery: Button click</h3>
                 <img src="images2/D004b.png" id="D005" />
             </div>
             <div class="col-md-6">
-                <h3>Stages (Word Count Function)</h3>
+                <h3>Change images and text</h3>
                 <!--<img src="images2/C004.png" id="D004" />-->
-                <p>Stage 1: Remove punctuation and split paragraphs into sentences.</p>
-                <p>Stage 2: Create array to hold number of words in each sentence.</p>
-                <p>Stage 3: For-loop: Go through each sentence. Split sentence by white-space. Count words cumulatively. Store number of words in sentence. Print sentence number and number of words in sentence.</p>
-                <p>Stage 4: Print total nuber of sentences and total number of words in paragraph.</p>
+                <p>When a button is clicked (target by class) this function is called.</p>
+                <p>The image fades out, all of the buttons (class) are set to black.</p>
+                <p>A variable (test1) gets the id of the button that was clicked (if button 2 is clicked, id = "butt1").</p>
+                <p>The id is then used to target the specific button and set it's colour to blue.</p>
+                <p>Next, a variable "a" gets the index of the button's id (id = "butt1" = index of 2).</p>
+                <p>This index is used in the other arrays to get the right text and image.</p>
+                <p>Finally the image is faded in (NOTE: the variable x1 set to 700).</p>
+                <p>Using jQuery tidied up the code (1 function rather than 11).</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>JSON: Array of Objects</h3>
+                <img src="images2/JSON002.png" id="D005" />
+            </div>
+            <div class="col-md-6">
+                <h3>Button IDs and URLs</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>(12/08/19) Update Code: Add JSON and add AJAX to jQuery.</p>
+                <p>Two of the arrays (button names and image urls) have been taken out of the js file and put into a JSON file as an array of objects.</p>
+                <p>I left the array of text in the js file because the strings are in a format which includes double qoutes.</p>
+                <p>I have an idea on how to format and parse the text array information but I'll leave that for later.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>JSON: Array of Button IDs</h3>
+                <img src="images2/JSON004.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>The 11th Element of JSON Array</h3>
+                <!--<img src="images2/C004.png" id="D004" />-->
+                <p>The 11th element of the array is an array which holds the button id's.</p>
+                <p>This information is redundant but I want to keep this array here because of how my code determines which button has been clicked. At some point in the future I will clean this up.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>JQUERY: AJAX Get JSON Data</h3>
+                <img src="images2/JSON003.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>Load JSON, Get JSON, Set CSS</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>The variable test1 holds the id of the button ("butt7").</p>
+                <p> The first value displayed in the console log is the index of the button id ("butt7" = 7).</p>
+                <p> This value is saved to a variable named id and it's then used to pull out the corresponding button id and image url.</p>
+                <p>These values are displayed in the console and then used to change the CSS values.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Console: Index, Button ID and URL</h3>
+                <img src="images2/JSON001.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>Console Log: Testing Variable Values</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>console.log(data1[11].buttonArray.indexOf(test1));</p>
+                <p>If test1 = "butt7"</p>
+                <p>console.log(data1[11].buttonArray.indexOf("butt7")) = 7</p>
+                <p>id = 7</p>
+                <p>console.log(data1[id].buttonNum2);</p>
+                <p>console.log(data1[7].buttonNum2) = "butt7"</p>
+                <p>This may seem redundant however it proves that the code is working as desired.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Console: Reference Error 1</h3>
+                <img src="images2/E001.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>HTML Line 28</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>The console shows that the error: button2 is not defined... occurs in the HTML file on line 28.</p>
+                <p>However the text and image is loaded fine and the variables are holding the correct values.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Console: Reference Error 2</h3>
+                <img src="images2/E002.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>Trying to Call JavaScript Function</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>When I clicked on the error, line 28 of the HTML file was highlighted.</p>
+                <p>Then I realized that the button2() function that is called is function tht I had put in the Javascript file.</p>
+                <p>The code is trying to call a function which doesn't exist anymore (not defined).</p>
+                <p>By removing the OnClick parameter for all of the buttons it solved the issue.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Console: Image Name Error</h3>
+                <img src="images2/E004.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>White-Space</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>This error was returning when I clicked on two of the buttons.</p>
+                <p>I soon realized that the names of the images had a white-space in them ("diagonal difference2.png").</p>
+                <p>By getting rid of the white-space ("diagonalDifference2.png") it fixed the issue.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>WEB.CONFIG: Issue</h3>
+                <img src="images2/ERR001.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>Access-Control-Allow-Origin: Error</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>When I first published the web app with the AJAX code in it the images weren't changing properly.</p>
+                <p>I looked at the console and saw the Access-Control-Allow-Origin error.</p>
+                <p>On stackoverflow someone suggested altering the web.config file.</p>
+                <p>Doing this solved the problem but it has got me thinking about the security issues that arise when using JSON files.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Location of JSON file</h3>
+                <img src="images2/E003.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>URL</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>I changed the URL.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Problem: Text in JSON 1</h3>
+                <img src="images2/JSON010.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>"Concatenated " + "Strings" + "\n"</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>(23/08/2019) - JSON has an issue with certain characters.</p>
+                <p>They need to be escaped /".</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Problem: Text in JSON 2</h3>
+                <img src="images2/JSON012.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>Rextester: Coding Text 1</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>I took the strings and replaced "\n" with "xxx"</p>
+                <p>I chose to use "xxx" because I know that in all of the strings that I want to code, this particular combination of characters doesn't exist.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Problem: Text in JSON 3</h3>
+                <img src="images2/JSON011.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>Rextester: Coding Text 2</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>As you can see from the screenshot the code gets rid of the newlines and replaces them with "xxx".</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Problem: Text in JSON 4</h3>
+                <img src="images2/JSON013.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>JSON: Coding Text 3</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>Once the text was coded, I entered these strings into an array in the JSON file.</p>
+                <p>The JSON file did not have a problem with the text in this format as it read it as one string.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Problem: Text in JSON 5</h3>
+                <img src="images2/JSON014.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>jQuery: Coding Text 4</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>When the JSON data is loaded I create a variable to hold the text information (var textJSON).</p> 
+                <p>The code looks for any instance of "xxx" and puts the "\n" back.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Problem: Text in JSON 6</h3>
+                <img src="images2/JSON015.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Solution: Coding Text</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>The website seemed to be working correctly but to test it I checked the console.</p>
+                <p>As you can see from the image, the code is selecting the right text and is decoding it as desired.</p>
+                <p>Now all of the the arrays are contained in the JSON file and the jQuery just contains code making it more organised and consequently, easier to read.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Development Stages</h3>
+                <!--<img src="images2/struct1.jpg" id="D014" />-->
+                <p>Stage 1: HTML + Javascript (11 functions).</p>
+                <p>Stage 2: HTML + jQuery (1 function and 3 arrays).</p>
+                <p>Stage 3: HTML + jQuery (1 function) + JSON (1 array).</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Stage 1</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>When I first created the website I used JavaScript to set the text and the images.</p>
+                <p>Then I replaced the JavaScript file with jQuery. It determined which button was clicked and then set the text/images.</p>
+                <p>Now the jQuery determines which button was pressed, loads the JSON array and sets the text/images.</p>
             </div>
         </div><br><hr>
     </div>

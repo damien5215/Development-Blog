@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            /*width: 100%;*/
+        }
+
+        /*h3{
+            text-align: center;
+        }*/
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+        /*div.row{
+            background-color: black;
+            opacity: 0.8;
+        }
+        p {
+            color: white;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <!--RESTORE THIS LATER-->
+        <!--<h1>DevDiary</h1>-->                            <!--RESTORE THIS LATER-->
+        <!--<div>-->                                                   <!--CHANGE-->
+        <!--<br>-->                                                <!--CHANGE-->
+        <h1 align="center">DevDiary</h1>                    <!--CHANGE-->
+    </div>
+
+    <div class="container">
+        <!--ADDED-->
+        <div class="row">
+            <!--ADDED-->
+            <div class="col-sm-12">
+                <!--ADDED-->
+                <h3><a href="001.html">HOME</a></h3>        <!--ADDED-->
+            </div>                                          <!--ADDED-->
+        </div>                                              <!--ADDED-->
+    </div>                                                  <!--ADDED-->
+
+    <div class="container">
+        <br><hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Project 3: MVC + SQL</h3>
+                <img src="images2/MVC001b.png" id="D001" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Jazz CDs</h3>
+                <p>(18/08/2019) - I built this application to become familiar with the MVC framework.</p>
+                <p>From the first screenshot you can see that I used a partial view to display two tables at the same time (product table and cart table).</p>
+                <p>xxxxxxxxxxxxxxx</p>
+                <p>xxxxxxxxxxxxxxx</p>
+                <p>NOTE: Here is a link to the project - <a href="http://www.jazzcd.damienasp2.com/Home/Home" target="_blank">PROJECT3</a></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<br>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>ADD Product to Cart</h3>            
+                <img src="images2/MVC002.png" id="D003" />
+            </div>
+            <div class="col-md-6">
+                <h3>Shop Tab</h3>  
+                <p>When the ADD button is clicked in the product table, the id of the product is sent to this action method "ADD".</p>
+                <p>This method is contained inside the "ProductTables" controller.</p>
+                <p>This id parameter is used to find the name of the product and then to determine whether the cart contains one of these products.</p>
+                <p>If it doesn't, an object for the cart table is created, assaigned the appropriate values and is added to the cart table.</p>
+                <p>If the product already exists in the cart table then the quantity is incremented.</p>
+                <p>NOTE: Here is a link to the code for this controller - <a href="https://github.com/damien5215/MVC_JazzCDs1/blob/master/Controllers/ProductTablesController.cs" target="_blank">ProductTablesController</a></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<br>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>SQL Design Issue</h3>
+                <img src="images2/MVC003.png" id="D012" />
+            </div>
+            <div class="col-md-6">
+                <h3>Missing Primary/Foreign Key Constraint</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>When I created the database I forgot to set up a primary and foreign key constraint between these tables.</p>
+                <p>The cart table should have a ProductID parameter rather than the Name, Price and Image parameters.</p>
+                <p>This way the product table would act as a kind of look-up or reference table for the cart table.</p>
+                <p>When I remake this project I will rectify this.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+
+    <!--<br>-->
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
