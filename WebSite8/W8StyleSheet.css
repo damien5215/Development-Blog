@@ -16,6 +16,11 @@ img {
     text-align: center;
 }
 
+#img2 {
+    text-align: center;
+    display:none;
+}
+
 div.container{
     /*//background-color: dimgrey;*/
     /*//background-color: black;
@@ -66,4 +71,5 @@ textarea{
 #butt0 { 
     background-color: blue;
 }
+
 

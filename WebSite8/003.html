@@ -64,10 +64,10 @@
                 <img src="images2/D001.png" id="D001" />
             </div>
             <div class="col-sm-6">
-                <h3>JavaScript + jQuery</h3>
+                <h3>JavaScript, jQuery, JSON/AJAX</h3>
                 <p>(04/08/2019) - I built this application because I want to display some of the code that I wrote for the HackerRank problems that I've solved.</p>
                 <p>The layout is a grid with three columns. One column for buttons, a column for the textbox and the last column is for screenshots of the code.</p>
-                <p>When I started this project I did not know much about JavaScript or jQuery but I had learned that it could change CSS rules.</p>
+                <p>When I started this project I did not know much about JavaScript, jQuery or JSON/AJAX but I had learned that JS could change CSS rules.</p>
                 <p>Originally I developed a JavaScript file with a function for each button.</p>
                 <p>When the button is clicked it changes the colour of the button, the text in the textbox and the images that was displayed.</p>
                 <p>NOTE: Here is a link to the project - <a href="http://www.text.damienasp.com/MYHACKERRANKSOLUTIONS.html" target="_blank">PROJECT2</a></p>
@@ -84,7 +84,7 @@
                 <img src="images2/D002b.png" id="D003" />
             </div>
             <div class="col-md-6">
-                <h3>Change images and text</h3>  
+                <h3>Change Images and Text</h3>  
                 <p>As you can see from the screenshot, when a button is clicked a function is called and it changes the image and the text.</p>
                 <p>The imgFadeIn() function then called a function which let the image fade in.</p>
                 <p>The JavaScript changed the image and text but after looking at the source code I do not think I got the imgFadeIn() function to work as desired.</p>
@@ -105,11 +105,12 @@
             <div class="col-md-6">
                 <h3>Button IDs, URLs and Text</h3>
                 <!--<img src="images2/C004.png" id="D004" />-->
+                <p>In the HTML I commented out the JavaScript file and inserted a jQuery file because I wanted to add a small animation for when the image is changed. I decided to put the information that I needed into three arrays.</p>
                 <p>The first array "buttonNum" contains a number of strings.</p>
                 <p>These strings are the names of the button ID's of all the buttons in the HTML file.</p>
                 <p>The second array contains the URLs for all of the image files.</p>
                 <p>The third array contains all of the text for the text-box.</p>
-                <p>NOTE: Here is a link to the full jQuery code - <a href="https://github.com/damien5215/HackerRank-Code/blob/master/WebSite8/ExternalJquery.js" target="_blank">JQUERY</a></p>
+                <p>NOTE: Here is a link to the full jQuery (old) code - <a href="https://github.com/damien5215/HackerRank-Code/blob/master/WebSite8/ExternalJqueryOld.js" target="_blank">JQUERY</a></p>
             </div>
         </div><br><hr>
     </div>
@@ -121,7 +122,7 @@
                 <img src="images2/D004b.png" id="D005" />
             </div>
             <div class="col-md-6">
-                <h3>Change images and text</h3>
+                <h3>Change Images and Text</h3>
                 <!--<img src="images2/C004.png" id="D004" />-->
                 <p>When a button is clicked (target by class) this function is called.</p>
                 <p>The image fades out, all of the buttons (class) are set to black.</p>
@@ -214,7 +215,7 @@
                 <h3>HTML Line 28</h3>
                 <!--<img src="images2/JSON001.png" id="D012" />-->
                 <p>The console shows that the error: button2 is not defined... occurs in the HTML file on line 28.</p>
-                <p>However the text and image is loaded fine and the variables are holding the correct values.</p>
+                <p>However the text and image loaded fine and the variables are holding the correct values.</p>
             </div>
         </div><br><hr>
     </div>
@@ -229,7 +230,7 @@
                 <h3>Trying to Call JavaScript Function</h3>
                 <!--<img src="images2/JSON001.png" id="D012" />-->
                 <p>When I clicked on the error, line 28 of the HTML file was highlighted.</p>
-                <p>Then I realized that the button2() function that is called is function tht I had put in the Javascript file.</p>
+                <p>Then I realized that the button2() function is a function that I had defined in the JavaScript file (the JavaScript file that I had commented-out in the HTML).</p>
                 <p>The code is trying to call a function which doesn't exist anymore (not defined).</p>
                 <p>By removing the OnClick parameter for all of the buttons it solved the issue.</p>
             </div>
@@ -305,7 +306,7 @@
                 <img src="images2/JSON012.png" id="D012" />
             </div>
             <div class="col-md-6">
-                <h3>Rextester: Coding Text 1</h3>
+                <h3>Unit Test: Coding Text 1</h3>
                 <!--<img src="images2/JSON001.png" id="D012" />-->
                 <p>I took the strings and replaced "\n" with "xxx"</p>
                 <p>I chose to use "xxx" because I know that in all of the strings that I want to code, this particular combination of characters doesn't exist.</p>
@@ -320,9 +321,11 @@
                 <img src="images2/JSON011.png" id="D012" />
             </div>
             <div class="col-md-6">
-                <h3>Rextester: Coding Text 2</h3>
+                <h3>Unit Test: Coding Text 2</h3>
                 <!--<img src="images2/JSON001.png" id="D012" />-->
                 <p>As you can see from the screenshot the code gets rid of the newlines and replaces them with "xxx".</p>
+                <p>In this example (Time Conversion Problem) there are still double-quote characters.</p>
+                <p>I escaped them in the JSON file (as \"01:45:20PM\" to)."</p>
             </div>
         </div><br><hr>
     </div>
@@ -376,18 +379,123 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Development Stages</h3>
-                <!--<img src="images2/struct1.jpg" id="D014" />-->
-                <p>Stage 1: HTML + Javascript (11 functions).</p>
-                <p>Stage 2: HTML + jQuery (1 function and 3 arrays).</p>
-                <p>Stage 3: HTML + jQuery (1 function) + JSON (1 array).</p>
+                <h3>jQuery fadeIn/fadeOut</h3>
+                <img src="images2/fadeOut001.png" id="D014" />
             </div>
             <div class="col-md-6">
-                <h3>Stage 1</h3>
+                <h3>Callback Function</h3>
+                <!--<img src="images2/JSON001.png" id="D012" />-->
+                <p>When I first wrote the code for this small animation, the image was being changed faster than the fadeOut function.</p>
+                <p>By arranging the code as the screenshot shows (call back function), the current image fades out and once it has gone, the new image is set and the new image fades in.</p>
+                <p>The animation is a lot smoother now.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Loading Images Faster 1 (Problem)</h3>
+                <!--<img src="images2/fadeOut001.png" id="D014" />-->
+                <p>(01/09/2019): When a button is clicked, the old image fades out, the new image is set and faded in at the same time.</p>
+                <p>This creates a problem because an image doesn't download and render instantanously. During the "fade in" the image often renders.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Solution: HTML, CSS and jQuery</h3>
+                <p>After learing more about this problem I came up with a solution.</p>
+                <p>I created a new div with an image element in the HTML and used the CSS stylesheet to hide the image. Then in the jquery I set this image early so that the image has time to cache and download.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Loading Images Faster 2</h3>
+                <img src="images2/imgLoad001.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>HTML add new image</h3>
+                <p>At the bottom of the HTML code I added a div element.</p>
+                <p>Inside the div is an image with the id, "img2".</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Loading Images Faster 3</h3>
+                <img src="images2/imgLoad002.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>CSS hide #img2</h3>
+                <p>In the CSS style sheet I set the display attribute for the image to none.</p>
+                <p>xxxxxx</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Loading Images Faster 4</h3>
+                <img src="images2/imgLoad003.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Jquery set #img2</h3>
+                <p>As soon as the "image URL" from the JSON data loads the hidden #img2 is set.</p>
+                <p>This executes before the old image fades out (700), giving the image time (700) to be downloaded and cached.</p>
+                <p>This fixed the issue that I was having and I used the technique because the images are relatively small and I only need to do one at a time.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Development Stages</h3>
+                <!--<img src="images2/struct1.jpg" id="D014" />-->
+                <p>Stage 1: HTML + CSS + Javascript (11 functions).</p>
+                <p>Stage 2: HTML + CSS + jQuery (1 function and 3 arrays).</p>
+                <p>Stage 3: HTML + CSS + jQuery (1 function) + JSON (1 array).</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Button IDs, Image URLs and Text</h3>
                 <!--<img src="images2/JSON001.png" id="D012" />-->
                 <p>When I first created the website I used JavaScript to set the text and the images.</p>
                 <p>Then I replaced the JavaScript file with jQuery. It determined which button was clicked and then set the text/images.</p>
                 <p>Now the jQuery determines which button was pressed, loads the JSON array and sets the text/images.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h3>HTML</h3>
+                <script src="https://gist.github.com/damien5215/ad3a0c76aca519ad894b2ec43b3b7ed7.js"></script>
+                <!--<img src="images2/HTML1.png" id="D014" />-->
+            </div>
+            <div class="col-md-5">
+                <h3>CSS</h3>
+                <script src="https://gist.github.com/damien5215/a039ad75eb5b67236b814971f4e3a31a.js"></script>
+                <!--<img src="images2/CSS1.png" id="D014" />-->
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h3>jQuery</h3>
+                <script src="https://gist.github.com/damien5215/5f13979d29c23a271c529e793c72cdc5.js"></script>
+                <!--<img src="images2/jQuery1.png" id="D014" />-->
+            </div>
+            <div class="col-md-5">
+                <h3>JSON</h3>
+                <script src="https://gist.github.com/damien5215/9e086d3c0e41c6ef8280c279434e40f5.js"></script>
+                <!--<img src="images2/JSON1.png" id="D014" />-->
             </div>
         </div><br><hr>
     </div>
