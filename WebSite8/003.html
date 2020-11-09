@@ -80,11 +80,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>JavaScript: Button Functions</h3>            
+                <h3>JavaScript: Button Functions</h3>
                 <img src="images2/D002b.png" id="D003" />
             </div>
             <div class="col-md-6">
-                <h3>Change Images and Text</h3>  
+                <h3>Change Images and Text</h3>
                 <p>As you can see from the screenshot, when a button is clicked a function is called and it changes the image and the text.</p>
                 <p>The imgFadeIn() function then called a function which let the image fade in.</p>
                 <p>The JavaScript changed the image and text but after looking at the source code I do not think I got the imgFadeIn() function to work as desired.</p>
@@ -354,7 +354,7 @@
             <div class="col-md-6">
                 <h3>jQuery: Coding Text 4</h3>
                 <!--<img src="images2/JSON001.png" id="D012" />-->
-                <p>When the JSON data is loaded I create a variable to hold the text information (var textJSON).</p> 
+                <p>When the JSON data is loaded I create a variable to hold the text information (var textJSON).</p>
                 <p>The code looks for any instance of "xxx" and puts the "\n" back.</p>
             </div>
         </div><br><hr>
@@ -470,17 +470,15 @@
         </div><br><hr>
     </div>
 
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col-md-7">
                 <h3>HTML</h3>
                 <script src="https://gist.github.com/damien5215/ad3a0c76aca519ad894b2ec43b3b7ed7.js"></script>
-                <!--<img src="images2/HTML1.png" id="D014" />-->
             </div>
             <div class="col-md-5">
                 <h3>CSS</h3>
                 <script src="https://gist.github.com/damien5215/a039ad75eb5b67236b814971f4e3a31a.js"></script>
-                <!--<img src="images2/CSS1.png" id="D014" />-->
             </div>
         </div><br><hr>
     </div>
@@ -490,17 +488,162 @@
             <div class="col-md-7">
                 <h3>jQuery</h3>
                 <script src="https://gist.github.com/damien5215/5f13979d29c23a271c529e793c72cdc5.js"></script>
-                <!--<img src="images2/jQuery1.png" id="D014" />-->
             </div>
             <div class="col-md-5">
                 <h3>JSON</h3>
                 <script src="https://gist.github.com/damien5215/9e086d3c0e41c6ef8280c279434e40f5.js"></script>
-                <!--<img src="images2/JSON1.png" id="D014" />-->
+            </div>
+        </div><br><hr>
+    </div>-->
+
+    <!--<br>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!--<h3>Async/Await JS Code</h3>-->
+                <img src="images2/async001.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Update: Async/Await JS Code</h3>
+                <p>A month ago I started doing a full-stack JavaScript course (Treehouse) and decided to re-write this website using async, await and promises.</p>
+                <p>This time I have avoided using jQuery so the animation has been removed.</p>
+                <p>I created a new folder and put a new the HTML, JSON and JavaScript file there.</p>
+                <p>NOTE: Here is a link to the updated project - <a href="http://www.text.damienasp.com/A01/MHRS01.html" target="_blank">PROJECT2</a></p>
             </div>
         </div><br><hr>
     </div>
 
-    <!--<br>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async/Await JS Code 01</h3>
+                <img src="images2/async002.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Variable Declarations and Default Settings</h3>
+                <p>These four lines of code define the path for the JSON file and set the default image and "highlighted" button.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async/Await JS Code 02</h3>
+                <img src="images2/async003.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Event Listener</h3>
+                <p>This code listens for one of the buttons to be clicked.</p>
+                <p>When one of the buttons are clicked a for-loop is used to set all the buttons to black then using the "event object", the button that was clicked is set to red.</p>
+                <p>Next an asynchronous function is called (getData1).</p>
+                <p>This function gets information from JSON file and reurns a promise object</p>
+                <p>The getValue function then accesses the array and the text and images are set.</p>
+                <p>If an error occurs it will be caught by the catch() method and logged in the console.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async/Await JS Code: ERROR</h3>
+                <img src="images2/async008.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Console Log Error (URL)</h3>
+                <p>To test the catch() method I changed the path of the url of the JSON file.</p>
+                <p>"http://www.text.damien<b>gnsgnsgsssad</b>asp.com/A01/HR01JSON.json"</p>
+                <p>This time, when a button is clicked, the catch() method is triggered.</p>
+                <p>.catch(error => console.log("Error occurred! " + error));</p>
+                <p>The promise changes from pending to rejected and an error message is displayed.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async/Await JS Code 03</h3>
+                <img src="images2/async004.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Asynchronous Function</h3>
+                <p>const dataURL = "http://www.text.damienasp.com/A01/HR01JSON.json";</p>
+                <p>This function gets the information using fetch() and json() from the JSON file.</p>
+                <p>The fetch() method returns a promise that resolves to a response object.</p>
+                <p>The json() method parses a response stream to JSON.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async/Await JS Code 04</h3>
+                <img src="images2/async005.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>JSON file</h3>
+                <p>The file is similar to the previous JSON file but it is more stipped down.</p>
+                <p>All it contains is the text for the textarea element and urls for the images.</p>
+                <p>The text for the textarea element is still coded to preserve the format.</p>
+                <p>This is still decoded in the JavaScript file.</p>
+                <p>The length of the array is 11 as there are 11 buttons.</p>
+                <p>NOTE: Here is a link to the updated JSON file - <a href="http://www.text.damienasp.com/A01/HR01JSON.json" target="_blank">JSON file</a></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async/Await JS Code 05</h3>
+                <img src="images2/async007.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Console Log</h3>
+                <p>When the button "Ex 01" is clicked it loads the "diagonal difference" image and text.</p>
+                <p>The promise object is also logged to the console.</p>
+                <p>The status of the promise changes from pending to resolved and then the contents of the JSON file can be read.</p>
+                <p>This screenshot shows the complete contents of the JSON file.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!--<h3>Async/Await JS Code</h3>-->
+                <img src="images2/async010.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Update: Restore Animation</h3>
+                <p>I have created a new folder.</p>
+                <p>The only change is in the javascript file.</p>
+                <p>I put back the fade in and fade out animation.</p>
+                <p>NOTE: Here is a link to the updated project - <a href="http://www.text.damienasp.com/A02/MHRS02.html" target="_blank">PROJECT2</a></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async/Await JS Code 06</h3>
+                <img src="images2/async009.png" id="D014" />
+            </div>
+            <div class="col-md-6">
+                <h3>Added 2 lines of jQuery</h3>
+                <p>The image fades out and then the block of code which sets the text and images is put inside a callback.</p>
+                <p>This means that once the image fades out then the text and images are set.</p>
+                <p>The fadeIn function is put inside the "then" function which is chained after the block.</p>
+                <p>The image fades out, the text and images is changed and then the image fades back in.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
 
     <br>
     <br>

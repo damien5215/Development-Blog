@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+
+<body>
+    <ul><li>My Site</li></ul>
+    <div class="jumbotron text-center">          
+        <img height="80" width="80" src="I001.jpg" />
+        <h4 align="center">TheBalancedWriter521</h4>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2" style="text-align:center;">
+                    <h3></h3>
+                </div>
+                <div class="col-sm-8" style="text-align:center;">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3" style="text-align:center;">
+                                <h3></h3>
+                            </div>
+                            <div class="col-sm-1" style="text-align:center;">
+                                <h3><a href="001.html">Posts</a></h3>
+                            </div>
+                            <div class="col-sm-1" style="text-align:center;">
+                                <h3><a href="002.html">Diary</a></h3>
+                            </div>
+                            <div class="col-sm-1" style="text-align:center;">
+                                <h3><a href="003.html">Jazz</a></h3>
+                            </div>
+                            <div class="col-sm-1" style="text-align:center;">
+                                <h3><a href="004.html">Lists</a></h3>
+                            </div>
+                            <div class="col-sm-1" style="text-align:center;">
+                                <h3>Test</h3>
+                            </div>
+                            <div class="col-sm-1" style="text-align:center;">
+                                <h3><a href="006.html">About</a></h3>
+                            </div>
+                            <div class="col-sm-3" style="text-align:center;">
+                                <h3></h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2" style="text-align:center;">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container">
+        <!--<hr>-->
+        <div class="row">
+            <div class="col-sm-2">
+                <h3></h3>
+            </div>
+            <div class="col-sm-8">
+                <p><b>Word Counter</b></p>
+                <p>This is a dynamic word counter that I made in JavaScript. If copy and pasting chunks of text please make sure that every sentence is connected, i.e. no new lines. It's pretty crude. Check out the code below to see just how unrefined it is!</p>
+                <!--<p>Arrays, For-Loop, Methods, Functions.</p>
+                <p>Update GitHub. JavaScript Set CSS.</p>
+                <p>NOTE: Here is a link to the work - <a href="002.html">001</a></p>-->
+
+                <textarea id="text1" rows="10" cols="48" oninput="dynamicText()">Type Here.</textarea>
+                <textarea id="text2" rows="10" cols="48" readonly="readonly"></textarea>
+            </div>
+            <div class="col-sm-2">
+                <h3></h3>
+            </div>
+        </div><br>
+    </div>
+
+    <div class="container">
+        <!--<hr>-->
+        <div class="row">
+            <div class="col-sm-2">
+                <h3></h3>
+            </div>
+            <div class="col-sm-8">
+                <img id="code1" src="fun1.png" />
+            </div>
+            <div class="col-sm-2">
+                <h3></h3>
+            </div>
+        </div><br>
+    </div>
+
+    <br>
+    <br>
+
+
+    <script>
+        function dynamicText() {
+
+            var x = document.getElementById("text1").value;
+
+            var sentNum = (x.split(".").length - 1);
+            var wordNum = (x.split(" ").length - 1);
+
+            var sentNum2 = (x.split("."));
+            var wordNum2 = (x.split(" "));
+
+            document.getElementById("text2").innerHTML = "There are " + sentNum +
+                " sentences." + "\n" + "There are " + (wordNum + 1) + " words."
+                + "\n" + "There are " + x.length + " characters." + "\n" + "\n" +
+                sentNum2[sentNum] + "\n" + "\n" + wordNum2[wordNum];
+        }
+        dynamicText();
+    </script>
+
+</body>
+</html>

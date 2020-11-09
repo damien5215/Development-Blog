@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            width: 100%;
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 align="center">DevDiary</h1>                    <!--CHANGE-->
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3><a href="001.html">HOME</a></h3>        <!--ADDED-->
+            </div>                                          <!--ADDED-->
+        </div>                                              <!--ADDED-->
+    </div>                                                  <!--ADDED-->
+
+    <div class="container">
+        <br><hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>MVC Framework</h3>
+                <img src="images4/mvc000.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>MVC Project</h3>
+                <p>These screenshots document the process of following/adapting a tutorial from Treehouse.</p>
+                <p>The project displays product details (books).</p>
+                <p>It demonstrates how to model data, views and controllers.</p>
+                <p>The project doesn't contain a database therefore the data is hard-coded initally in the controller and then into a repository.</p>
+                <p>It also conatins some screenshots, showing how to use the debugger (visual studio) and following the data flow of the application.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Model (Book)</h3>
+                <img src="images4/mvc010.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Controller (Detail)</h3>
+                <img src="images4/mvc011.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Strongly Typed View (Detail)</h3>
+                <img src="images4/mvc012.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Rendered View (Book/Detail)</h3>
+                <img src="images4/mvc013b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Repository Design Pattern</h3>
+                <img src="images4/mvc201.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Object Instantiation ("Book" Model)</h3>
+                <p>A new folder was added to the project (Data).</p>
+                <p>A class was added to this folder and this class contains the code to instantiate the book objects.</p>
+                <p>This object instantiation code has been moved from the controller to this repository class.</p>
+                <p>Typically the data would be stored in a database.</p>
+                <p>It generates an array of type "Book".</p>
+                <p>In this example there are two different books inside the array.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Repository Design Pattern: Controller</h3>
+                <img src="images4/mvc200.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Repository Instantiation</h3>
+                <p>Private field value set to null.</p>
+                <p>The constructor method instantiates the repository.</p>
+                <p>NOTE: Constructor methods do not have a return type and have the same name as the class.</p>
+                <p>A parameter is now being passed to the "Detail" action method.</p>
+                <p>"Int?" is a nullable type.</p>
+                <p>If the id is NULL then HttpNotFound() is called.</p>
+                <p>Otherwise the id is passed to the "GetBook" method.</p>
+                <p>A book object corresponding to the value of the id and the array of book objects is returned</p>
+                <p>This is then sent to the view.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Repository Design Pattern: Controller</h3>
+                <img src="images4/mvc206.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Debug: Pass id</h3>
+                <p>A breakpoint was set in the controller and this URL was entered - </p>
+                <p>"Books/Detail/2"</p>
+                <p>The id parameter "2" was passed to to the "Detail" action method.</p>
+                <p>The next step passes this value to the "GetBook" method.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Repository Design Pattern: Repository</h3>
+                <img src="images4/mvc209.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Debug: GetBook(2)</h3>
+                <p>The foreach loop iterates through the array of Book objects.</p>
+                <p>The book wich has an id of "2" is "The Bell Jar".</p>
+                <p>The variable bookToReturn gets loaded with this information.</p>
+                <p>This value is then passed back to the controller.</p>
+                <img src="images4/mvc210.png" id="D003" />
+
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Repository Design Pattern: View</h3>
+                <img src="images4/mvc211.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Debug: "Books/Detail/2"</h3>
+                <img src="images4/mvc212.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Test: "Books/Detail/1"</h3>
+                <img src="images4/mvc300.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Test: "Books/Detail/3"</h3>
+                <img src="images4/mvc301.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Debug: "Books/Detail/3"</h3>
+                <img src="images4/mvc302.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>NullReferenceException</h3>
+                <p>"Books/Detail/3"</p>
+                <p>Passing the value of 3 as the id causes an error.</p>
+                <p>There are only 2 book objects in the array.</p>
+                <p>In the detail action method, the book variable is NULL when the id = 3.</p>
+                <p>This NULL valued book object is sent to the view.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Controller: Detail</h3>
+                <img src="images4/mvc303.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>HttpNotFound()</h3>
+                <p>Added this to the Detail action method.</p>
+                <p>Now when the book variable is NULL...</p>
+                <p>It results in the error screen below (404).</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Test: "Books/Detail/3"</h3>
+                <img src="images4/mvc304.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <!--<h3>Test: "Books/Detail/3"</h3>
+                <p>Added this to the Detail action method.</p>
+                <p>Now when the book variable is NULL...</p>
+                <p>It results in the error screen to the right (404).</p>-->
+            </div>
+        </div><br><hr>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

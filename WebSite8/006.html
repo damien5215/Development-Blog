@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            width: 100%;
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 align="center">DevDiary</h1>                    <!--CHANGE-->
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3><a href="001.html">HOME</a></h3>        <!--ADDED-->
+            </div>                                          <!--ADDED-->
+        </div>                                              <!--ADDED-->
+    </div>                                                  <!--ADDED-->
+
+    <div class="container">
+        <br><hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Database Schema (Entity Framework)</h3>
+                <img src="images5/db002.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>One-To-Many and Many-To-Many</h3>
+                <p>There are five tables in the database; Authors, Books, Genres, Fictions and BookGenres.</p>
+                <p>I designed this database to include a number of "one-to-many" relationships and one "many-to-many" relationship.</p>
+                <p>The many-to-many relationship is between Books and Genres because a book can have many genres and a genre can be assoiciated with a number of books.</p>
+                <p>BookGenres is the bridge entity for the many-to-many relationship.</p>
+                <p>The screenshots below show the class files for a few of the tables.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Model (Book)</h3>
+                <img src="images5/a00.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Model (Genre)</h3>
+                <img src="images5/dsk.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Model (Author)</h3>
+                <img src="images5/a01.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Data Annotations</h3>
+                <p>The [Required] data annotations is used to make the "name" property not nullable. </p>
+                <p>The [StringLength(100)] data annotation makes the data type in the SQL table "nvarchar(100)".</p>
+                <p>Without these annotations string properties are automatically set to null and string lengths are set to max.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Context Class</h3>
+                <img src="images5/a02.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Context Class</h3>
+                <p>The context class is used to retrieve enties from the database, persist new and changed entites to the database and remove entites from the database.</p>
+                <p>It inherits from the DbContext class and contains two DbSet properties. One for the "Book" entity and one for the "BookGenre" entity. </p>
+                <p>This means that I can write queries for these two entities.</p>
+                <p>This custom database initialiser inheits from an EF database initializer class. If the model changes then the database is dropped and recreated.</p>
+                <p>This "seed" code adds 7 authors, 9 books, 5 genres and 2 ficitons (ficiton and non-fiction).</p>
+                <p>NOTE: The DOBs are <b>not</b> correct.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Database Initializer</h3>
+                <img src="images5/a03.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Seeding Database (Author)</h3>
+                <img src="images5/a04.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Author Table (7 records)</h3>
+                <img src="images5/b01.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Genre Table (5 records)</h3>
+                <img src="images5/b03.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Book Table (9 records)</h3>
+                <img src="images5/b02.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookGenre Table (14 records)</h3>
+                <img src="images5/epk.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>SQL Query</h3>
+                <img src="images5/b04.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookGenre Table (SQL Query)</h3>
+                <p>This Query results in a table with three columns.</p>
+                <p>Author Name, Book Title and Genre.</p>
+                <p>There are three INNER JOINS.</p>
+                <p>The table below show the result of the query and the other screenshot shows the same query but filtering for all books that belong to the genre "General"</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BookGenre Table (SQL Query)</h3>
+                <img src="images5/b05.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookGenre Table (SQL Query), Filtering</h3>
+                <img src="images5/b06.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>LINQ Query: All Books in DB</h3>
+                <img src="images5/c01.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Books in Database (9 Records)</h3>
+                <img src="images5/c02.png" id="D003" />
+                <br>
+                <br>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>LINQ Query: Filter by Author Name</h3>
+                <img src="images5/c03.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Books in Database (2 Records)</h3>
+                <img src="images5/c03b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>LINQ Query: Filter by Contains("The")</h3>
+                <img src="images5/f01.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Books in Database (4 Records)</h3>
+                <img src="images5/f02.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>LINQ Query: Filter by Genre (Literary)</h3>
+                <img src="images5/e100.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Books in Database (3 Records)</h3>
+                <img src="images5/c04b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>SQL Query: Filter by Genre (Literary)</h3>
+                <img src="images5/e101.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Books in Database (3 Records)</h3>
+                <p>The LINQ query above generates this SQL query.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <!--<div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Added Two Projects</h3>
+                <img src="images5/webapp02.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Class Library and Web App (MVC)</h3>
+                <p>I've added two other projects to the solution.</p>
+                <p>A class library named "BookShared".</p>
+                <p>An MVC project named "BookWebApp".</p>
+                <p>The class library contains a data folder and the models folder.</p>
+                <p>They are shared (and referenced) by the console application and the webApp.</p>
+                <p>Entity Framework was downloaded for all of the projects.</p>
+                <p>The database is now being initialised in the web.config file.</p>
+                <p>The web.config file also contains the database connection string.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BookShared: Context.cs (Updated)</h3>
+                <img src="images5/webapp03.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookWebApp: web.config</h3>
+                <img src="images5/webapp05.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BookWebApp: BooksController: Context()</h3>
+                <img src="images5/webapp06a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookWebApp: BooksController: Index()</h3>
+                <img src="images5/webapp06b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BookWebApp: Index View</h3>
+                <img src="images5/webapp07a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookWebApp: Books/Index</h3>
+                <img src="images5/webapp07b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BooksController: Dispose()</h3>
+                <img src="images5/webapp08.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>MVC: Controller, Action Method, View</h3>
+                <p>The default constructor in the controller class instantiates a context instance when the controller is instantiated.</p>
+                <p>The index method contains LINQ statements which get a list of the books from the database.</p>
+                <p>The information is passed to the view.</p>
+                <p>Once the instance of the database context class is not needed anymore the dispose method is called.</p>
+                <p>In this configuration, the lifetime of the instance of the context is similar to the instance of the controller.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BooksController: Detail()</h3>
+                <img src="images5/webapp10.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>"Books/Detail/6"</h3>
+                <img src="images5/webapp12.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BookWebApp: BooksController: Detail()</h3>
+                <img src="images5/webapp12.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookWebApp:</h3>
+            </div>
+        </div><br><hr>-->
+    <!--</div>-->
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

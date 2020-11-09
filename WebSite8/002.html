@@ -13,6 +13,11 @@
             width: 100%;
         }
 
+        #D016 {
+            width: 517px;
+            height: 275px;
+        }
+
         #D014 {
             width: 100%;
             height: 100%;
@@ -56,11 +61,11 @@
         <div class="row">
             <div class="col-sm-6">
                 <h3>Text Editor</h3>
-                <img src="images2/C001.png" id="D001" />
+                <img src="images2/C001.png" id="D016" />
             </div>
             <div class="col-sm-6">
                 <h3>ASP.NET, Webforms</h3>
-                <p>(28/07/2019) - I've been looking at the code that I developed for my mini text editor.</p>
+                <p>This was my first project at JustIT.</p>
                 <p>There are five functions; WORD COUNT, SLANG CONVERTER, WORD FREQ, SEARCH and ANALYSE.</p>
                 <p>They work correctly however I've thought of a way to fix a small problem that the WORD COUNT function used to have.</p>
                 <p>When the paragraph of text is split into a string-array of sentences, an extra empty element is created at the end.</p>
@@ -74,14 +79,13 @@
         <div class="row">
             <div class="col-md-6">
                 <h3>Unit Test 01</h3>
-                <img src="images2/C002.png" id="D002" />
+                <img src="images2/t001.png" id="D002" />
             </div>
             <div class="col-md-6">
-                <h3>Problem (Word Count Function)</h3>
+                <h3>Word Count Function (Problem)</h3>
                 <p>As you can see from the image the paragraph is split by the full stop (".") and this creates five elements hence "senArray.Length = 5". Ideally this should equal four.</p>
                 <p>The last element (senArray[4]) is blank.</p>
-                <p>In the code I used some extra math, to offset the calculations so that the code would work they way I wanted it to but this is a bit convoluted.</p>
-                <p>NOTE - I'm testing this small segment of code in <a href="https://rextester.com/" target="_blank">rextester</a> (an online IDE).</p>
+                <p>NOTE - I'm testing this small segment of code in rextester (an online IDE).</p>
             </div>
         </div><br><hr>
     </div>
@@ -92,10 +96,10 @@
         <div class="row">
             <div class="col-md-6">
                 <h3>Unit Test 02</h3>
-                <img src="images2/C003.png" id="D003" />
+                <img src="images2/t002.png" id="D003" />
             </div>
             <div class="col-md-6">
-                <h3>Solution (Word Count Function)</h3>
+                <h3>Word Count Function (Solution)</h3>
                 <p>Now I've added some more formatting to the string to get rid of the space in front of the full stop (Replace(". ",".")).</p>
                 <p>text1.Split(splitOn.ToCharArray(), StringSplitOptions.RemoveEmptyEntries.</p>
                 <p>I came accross the line of code above whilst watching videos on PluralSight.</p>
@@ -118,6 +122,7 @@
                 <p>Stage 2: Create array to hold number of words in each sentence.</p>
                 <p>Stage 3: For-loop: Go through each sentence. Split sentence by white-space. Count words cumulatively. Store number of words in sentence. Print sentence number and number of words in sentence.</p>
                 <p>Stage 4: Print total nuber of sentences and total number of words in paragraph.</p>
+                <img src="images2/C004b.png" id="D005" />
             </div>
         </div><br><hr>
     </div>
@@ -237,7 +242,7 @@
         </div><br><hr>
     </div>
 
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h3>Project 2</h3>
@@ -245,14 +250,13 @@
             </div>
             <div class="col-md-6">
                 <h3>NEXT WEEK</h3>
-                <!--<img src="images2/C004.png" id="D004" />-->
                 <p>Next week I will aim to make a post about my second project and focus on how I used JavaScript and jQuery to change text and images.</p>
                 <p>I will also watch a few videos on JSON and AJAX and think about how to implement in my second project.</p>
                 <p></p>
                 <p></p>
             </div>
         </div><br><hr>
-    </div>
+    </div>-->
 
     <br>
     <br>

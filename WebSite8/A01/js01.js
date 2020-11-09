@@ -1,27 +1,30 @@
-﻿
-const dataURL = "http://www.text.damienasp.com/jsonData.json";
+﻿const dataURL = "http://www.text.damienasp.com/A01/HR01JSON.json";            // json URL
 const btnSelect = document.getElementsByTagName("input");
-document.querySelector('#img1').src = "http://www.text.damienasp.com/images2/D002b.png";     // set default image
-
-document.getElementById("btn0").style.backgroundColor = "red";          // set default to red.
-
+document.querySelector('#img1').src = "../images2/f300.png";                  // set default image
+document.getElementById("btn0").style.backgroundColor = "red";                // set default btn (red)
 
 for (let i = 0; i < btnSelect.length; i += 1) {
     btnSelect[i].addEventListener("click", function (e) {
-        console.log("You clicked btn" + i + "! " + event.target.value);    // event.target, this.className
+        console.log("You clicked btn" + i + "! " + event.target.value);       // event.target, this.className
 
-        for (let i = 0; i < btnSelect.length; i += 1) {
+        for (let i = 0; i < btnSelect.length; i += 1) {                           // set all btns to black
             document.querySelector('#btn' + i).style.backgroundColor = "black";
         }
-        event.target.style.backgroundColor = "red";     // set color of clicked button
-        //$("#img1").fadeOut(700);                      // TEST DELETE LATOR, it works!!!
+        event.target.style.backgroundColor = "red";                           // set color of button
+
+        console.log(getData1(dataURL));                                       // get promise object
+        getData1(dataURL).then(function getValue(getDataJSON) {
+            console.log(getDataJSON[i].imgString1);
+            const IMG = "../" + getDataJSON[i].imgString1;                    // get image
+            const TEXT = getDataJSON[i].textBox1.replace(/xxx/g, "\n");       // get text
+            document.querySelector('#img1').src = IMG;                        // set image 
+            document.querySelector('#text1').value = TEXT;                    // set text    
+        }).catch(error => console.log("Error occurred! " + error));
     })
 }
 
-
-//async function getData(dataURL){
-//    const response1 = await fetch(dataURL);
-//    const getDataJSON = await response1.json();
-//    return getDataJSON;
-//}
-
+async function getData1(dataURL) {
+    const response1 = await fetch(dataURL);
+    const getDataJSON = await response1.json();
+    return getDataJSON;
+};

@@ -1,0 +1,584 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            width: 100%;
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 align="center">DevDiary</h1>                    <!--CHANGE-->
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3><a href="001.html">HOME</a></h3>        <!--ADDED-->
+            </div>                                          <!--ADDED-->
+        </div>                                              <!--ADDED-->
+    </div>                                                  <!--ADDED-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Added Two Projects</h3>
+                <img src="images5/webapp02.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Class Library and Web App (MVC)</h3>
+                <p>I've added two other projects to the solution.</p>
+                <p>A class library named "BookShared".</p>
+                <p>An MVC project named "BookWebApp".</p>
+                <p>The class library contains a data folder and the models folder.</p>
+                <p>They are shared (and referenced) by the console application and the webApp.</p>
+                <p>Entity Framework was downloaded for all of the projects.</p>
+                <p>The database is now being initialised in the web.config file.</p>
+                <p>The web.config file also contains the database connection string.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BookShared: Context.cs (Updated)</h3>
+                <img src="images5/webapp03.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookWebApp: web.config</h3>
+                <img src="images5/webapp05.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BookWebApp: BooksController: Context()</h3>
+                <img src="images5/webapp06a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookWebApp: BooksController: Index()</h3>
+                <img src="images5/webapp06b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BookWebApp: Index View</h3>
+                <img src="images5/webapp07a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>BookWebApp: Books/Index</h3>
+                <img src="images5/webapp07b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BooksController: Dispose()</h3>
+                <img src="images5/webapp08.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>MVC: Controller, Action Method, View</h3>
+                <p>The default constructor in the controller class instantiates a context instance when the controller is instantiated.</p>
+                <p>The index method contains LINQ statements which get a list of the books from the database.</p>
+                <p>The information is passed to the view.</p>
+                <p>Once the instance of the database context class is not needed anymore the dispose method is called.</p>
+                <p>In this configuration, the lifetime of the instance of the context is similar to the instance of the controller.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container" id="detail">
+        <div class="row">
+            <div class="col-sm-6">
+                <!--<h3>BooksController: Detail()</h3>
+                <img src="images5/webapp10.png" id="D003" />-->
+                <h3>Controller Action Methods (CRUD)</h3>
+                <p>1: Index() – Displays all books in database.</p>
+                <p><b>2: Detail() – Displays all info for a selected book.</b></p>
+                <p><a href="#add">3</a>: Add() – Displays view for USER to enter data.</p>
+                <p><a href="#addPost">4</a>: Add() POST – Saves data to database.</p>
+                <p><a href="#edit">5</a>: Edit() – Displays view for USER to edit record.</p>
+                <p><a href="#editPost">6</a>: Edit() POST – Saves edited data to database.</p>
+                <p><a href="#delete">7</a>: Delete() – Displays view for a selected book.</p>
+                <p><a href="#deletePost">8</a>: Delete() POST – Deletes record from database.</p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Detail(): Displays all info for a selected book</h3>
+                <!--<img src="images5/webapp12.png" id="D003" />-->
+                <p>Each record displayed in the “Index” view contains its own “Detail” button. </p>
+                <p>When the detail button is clicked by the USER the id associated with the record is passed to the detail action method. </p>
+                <p>If the id sent to the server is NULL an error message is returned to the client (HttpStausCode.BadRequest). </p>
+                <p>If the id is not NULL the variable “book” get loaded with the book data for the record that matches the Id in the database. </p>
+                <p>After this if “book” is NULL (possibly caused by the Id not matching the Id of any of the records in the database) another error message is rendered (HttpNotFound). </p>
+                <p>If Id is not NULL and matches a record in the database then the data is passed to the view. </p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BooksController: Detail()</h3>
+                <img src="images5/webapp10.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>"Books/Detail/8"</h3>
+                <img src="images5/webapp12.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container" id="add">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Controller Action Methods (CRUD)</h3>
+                <!--<img src="images5/add000.png" id="D003" />-->
+                <p>1: Index() – Displays all books in database.</p>
+                <p><a href="#detail">2</a>: Detail() – Displays all info for a selected book.</p>
+                <p><b>3: Add() – Displays view for USER to enter data.</b></p>
+                <p><a href="#addPost">4</a>: Add() POST – Saves data to database.</p>
+                <p><a href="#edit">5</a>: Edit() – Displays view for USER to edit record.</p>
+                <p><a href="#editPost">6</a>: Edit() POST – Saves edited data to database.</p>
+                <p><a href="#delete">7</a>: Delete() – Displays view for a selected book.</p>
+                <p><a href="#deletePost">8</a>: Delete() POST – Deletes record from database.</p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Add(): Displays view for USER to enter data.</h3>
+                <p>Clicking on the "Add Book" button triggers the action method “Add()”.</p>
+                <p>An instance of the view model for “adding books” is instantiated.</p>
+                <p>The context object gets passed to the initialise method in the “add book” view model.</p>
+                <p>The context object gets passed to the initialise method in the base “add book” view model.</p>
+                <p>In the base “add book” view model, the select list for the “Authors” are retrieved from the database.</p>
+                <p>In the “add book” view model, the two select lists for “Genres” and “Fiction/Non-Fiction” are retrieved from the database.</p>
+                <p>Finally the “add book” view model is sent to the view and the HTML is rendered.</p>
+                <p>The following 8 screenshots show this process in more detail.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Add(): Instantiate instance of ViewModel</h3>
+                <img src="images5/add001.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Add(): Context passed into ViewModel's init()</h3>
+                <img src="images5/add002.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Add(): Context passed into BaseViewModel</h3>
+                <img src="images5/add011.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Add(): Retrieve list of Authors from DB</h3>
+                <img src="images5/add012.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Add(): Retrieve list of Genres and Fiction</h3>
+                <img src="images5/add015.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Add(): ViewModel sent to View</h3>
+                <img src="images5/add017.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>".../Books/Add"</h3>
+                <img src="images5/add019.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Add(): ViewModel sent to View</h3>
+                <img src="images5/add020.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container" id="addPost">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Controller Action Methods (CRUD)</h3>
+                <p>1: Index() – Displays all books in database.</p>
+                <p><a href="#detail">2</a>: Detail() – Displays all info for a selected book.</p>
+                <p><a href="#add">3</a>: Add() – Displays view for USER to enter data.</p>
+                <p><b>4: Add() POST – Saves data to database.</b></p>
+                <p><a href="#edit">5</a>: Edit() – Displays view for USER to edit record.</p>
+                <p><a href="#editPost">6</a>: Edit() POST – Saves edited data to database.</p>
+                <p><a href="#delete">7</a>: Delete() – Displays view for a selected book.</p>
+                <p><a href="#deletePost">8</a>: Delete() POST – Deletes record from database.</p>
+                
+            </div>
+            <div class="col-sm-6">
+                <h3>Add(): Saves data to database.</h3>
+                <p>The user enters some data and clicked on the “Save” button.</p>
+                <p> the “Book Add” view model data is posted to the “add post” method.</p>
+                <p>This data is loaded to a variable named “book”.</p>
+                <p>The “AddGenre” method is called passing in the required parameters.</p>
+                <p>The book is added to the context object.</p>
+                <p>The changes are saved.</p>
+                <p>Thee “detail” view for the new record is rendered.</p>
+                <p>The following 6 screenshots show this process in more detail.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Enter new book data (.../Books/Add)</h3>
+                <img src="images5/addPost001.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Add(): Posted data loaded to "var book"</h3>
+                <img src="images5/addPost003.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Add(): Posted data loaded to "var book"</h3>
+                <img src="images5/addPost004.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Add(): AddGenre Method</h3>
+                <img src="images5/addPost005.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Add book to DB and save changes</h3>
+                <img src="images5/addPost006.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>.../Books/Detail/19</h3>
+                <img src="images5/addPost007.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container" id="edit">
+        <div class="row">
+            <div class="col-sm-6">
+                <!--<h3>.../Books/Detail/19</h3>-->
+                <!--<img src="images5/edit002.png" id="D003" />-->
+                <h3>Controller Action Methods (CRUD)</h3>
+                <p>1: Index() – Displays all books in database.</p>
+                <p><a href="#detail">2</a>: Detail() – Displays all info for a selected book.</p>
+                <p><a href="#add">3</a>: Add() – Displays view for USER to enter data.</p>
+                <p><a href="#addPost">4</a>: Add() POST – Saves data to database.</p>
+                <p><b>5: Edit() – Displays view for USER to edit record.</b></p>
+                <p><a href="#editPost">6</a>: Edit() POST – Saves edited data to database.</p>
+                <p><a href="#delete">7</a>: Delete() – Displays view for a selected book.</p>
+                <p><a href="#deletePost">8</a>: Delete() POST – Deletes record from database.</p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): Displays view for USER to edit record.</h3>
+                <!--<img src="images5/edit003.png" id="D003" />-->
+                <p>When the data for one of the records (books) is displayed (books/detail/Id) and the USER clicks on the “edit” button. </p>
+                <p>The Id of the records gets passed to the edit action method. </p>
+                <p>If the server doesn’t receive the Id an error message is returned. </p>
+                <p>If the Id is not NULL it is used to query the database. </p>
+                <p>If a record exists in the database with a matching Id, the record gets loaded to the variable “book”.</p>
+                <p>The book constructor gets called. </p>
+                <p>If a record with a matching Id doesn’t exist in the database, HttpNotFound().</p>
+                <p>If it does a “Books Edit” view model instance is created, the book constructor is called and the book variable which is holding the data for the record with the matching Id is loaded to the view model’s book parameter. </p>
+                <p>The view model is passed to the view (Books/Edit/Id).</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>.../Books/Detail/19</h3>
+                <img src="images5/edit002.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): Id (19) passed to method</h3>
+                <img src="images5/edit003.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Edit(): Id used to load info from DB to var</h3>
+                <img src="images5/edit004.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): Book Constructor</h3>
+                <img src="images5/edit005.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Edit(): If book == Null (FALSE)</h3>
+                <img src="images5/edit006.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): New viewModel object </h3>
+                <img src="images5/edit007.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Edit(): BooksViewModel, new book</h3>
+                <img src="images5/edit008.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): Book Constructor</h3>
+                <img src="images5/edit009.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Pass context into viewModel.Init()</h3>
+                <img src="images5/edit012.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): Generate list of Authors (SelectList)</h3>
+                <img src="images5/edit014.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Edit(): Send viewModel to view</h3>
+                <img src="images5/edit015.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): .../Books/Edit/19</h3>
+                <img src="images5/edit016.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container" id="editPost">
+        <div class="row">
+            <div class="col-sm-6">
+                <!--<h3>Edit(): Change info and save</h3>
+                <img src="images5/editPost002.png" id="D003" />-->
+                <h3>Controller Action Methods (CRUD)</h3>
+                <p>1: Index() – Displays all books in database.</p>
+                <p><a href="#detail">2</a>: Detail() – Displays all info for a selected book.</p>
+                <p><a href="#add">3</a>: Add() – Displays view for USER to enter data.</p>
+                <p><a href="#addPost">4</a>: Add() POST – Saves data to database.</p>
+                <p><a href="#edit">5</a>: Edit() – Displays view for USER to edit record.</p>
+                <p><b>6: Edit() POST – Saves edited data to database.</b></p>
+                <p><a href="#delete">7</a>: Delete() – Displays view for a selected book.</p>
+                <p><a href="#deletePost">8</a>: Delete() POST – Deletes record from database.</p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): Saves edited data to database</h3>
+                <!--<img src="images5/editPost004.png" id="D003" />-->
+                <p>When the USER clicks tries to edit a record (book) they are directed to the view “…Books/Edit/Id”</p>
+                <p>Once the USER changes the data and clicks on the “save” button, the “Books Edit” view model data is passed to the edit POST action method.</p>
+                <p>The “edited record data” is loaded to a variable.</p>
+                <p>The variable is used to update the record inside the database.</p>
+                <p>The changes to the database are saved.</p>
+                <p>The USER is then redirected to the “detail” view of the new record, displaying the updated data.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Edit(): Change info and save</h3>
+                <img src="images5/editPost002.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): Data posted and loaded to "var book"</h3>
+                <img src="images5/editPost004.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Edit(): Changes saved to DB</h3>
+                <img src="images5/editPost005.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Edit(): Updated data passed to view</h3>
+                <img src="images5/editPost006.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container" id="delete">
+        <div class="row">
+            <div class="col-sm-6">
+                <!--<h3>Edit(): Change info and save</h3>
+                <img src="images5/editPost002.png" id="D003" />-->
+                <h3>Controller Action Methods (CRUD)</h3>
+                <p>1: Index() – Displays all books in database.</p>
+                <p><a href="#detail">2</a>: Detail() – Displays all info for a selected book.</p>
+                <p><a href="#add">3</a>: Add() – Displays view for USER to enter data.</p>
+                <p><a href="#addPost">4</a>: Add() POST – Saves data to database.</p>
+                <p><a href="#edit">5</a>: Edit() – Displays view for USER to edit record.</p>
+                <p><a href="#editPost">6</a>: Edit() POST – Saves edited data to database.</p>
+                <p><b>7: Delete() – Displays view for a selected book.</b></p>
+                <p><a href="#deletePost">8</a>: Delete() POST – Deletes record from database.</p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Delete(): Displays view for a selected book</h3>
+                <!--<img src="images5/editPost004.png" id="D003" />-->
+                <p>When the USER is viewing the data for one of the records (book) and they click on the “delete” button, the Id of the record is sent to the “delete” action method.</p>
+                <p>If the id sent to the server is NULL an error message is returned to the client (HttpStausCode.BadRequest).</p>
+                <p>If the id is NOT NULL then the id is used to retrieve the record from the database.</p>
+                <p>The book constructor is called.</p>
+                <p>The data is loaded to “var book”.</p>
+                <p>If a record matching that id, is not found, HttpNotFound() is returned.</p>
+                <p>The data for the record is passed to the view.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Delete(): ...Books/Detail/Id</h3>
+                <img src="images5/editPost006.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Delete(): Id (19) passed to method</h3>
+                <img src="images5/del001.png" id="D003" />
+                <!--<p>Clicking the delete button passes the id (19) to the delete action method.</p>
+                <p>The record is retieved from the database using the Id via LINQ statements.</p>-->
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Delete(): Book constructor</h3>
+                <img src="images5/del002.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Delete(): Record retrieved</h3>
+                <img src="images5/del003.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container" id="deletePost">
+        <div class="row">
+            <div class="col-sm-6">
+                <!--<h3>Edit(): Change info and save</h3>
+                <img src="images5/editPost002.png" id="D003" />-->
+                <h3>Controller Action Methods (CRUD)</h3>
+                <p>1: Index() – Displays all books in database.</p>
+                <p><a href="#detail">2</a>: Detail() – Displays all info for a selected book.</p>
+                <p><a href="#add">3</a>: Add() – Displays view for USER to enter data.</p>
+                <p><a href="#addPost">4</a>: Add() POST – Saves data to database.</p>
+                <p><a href="#edit">5</a>: Edit() – Displays view for USER to edit record.</p>
+                <p><a href="#editPost">6</a>: Edit() POST – Saves edited data to database.</p>
+                <p><a href="#delete">7</a>: Delete() – Displays view for a selected book.</p>
+                <p><b>8: Delete() POST – Deletes record from database.</b></p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Delete(): Deletes record from database</h3>
+                <p>The USER is prompted to check if they are sure that they want to delete the record (book).</p>
+                <p>If the USER clicks on “delete” button the id for the record gets passed to the “delete” POST action method.</p>
+                <p>An instance of a new book object is created with the same Id that was posted.</p>
+                <p>The record is deleted from the database.</p>
+                <p>The changes to the database are saved.</p>
+                <p>The USER is redirected to a list of all the books (…/Books/Index).</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Delete(): Confirm deletion</h3>
+                <img src="images5/del004.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Delete(): Id passed to action method</h3>
+                <img src="images5/del005.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Delete(): Book constructor</h3>
+                <img src="images5/del006.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Delete(): Delete book and display all books</h3>
+                <img src="images5/del007.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

@@ -10,12 +10,8 @@
 
     <style>
         #D001 {
-            /*width: 100%;*/
+            width: 100%;
         }
-
-        /*h3{
-            text-align: center;
-        }*/
 
         hr {
             display: block;
@@ -26,31 +22,18 @@
             border-style: inset;
             border-width: 1px;
         }
-        /*div.row{
-            background-color: black;
-            opacity: 0.8;
-        }
-        p {
-            color: white;
-        }*/
+        
     </style>
 </head>
 
 <body>
     <div class="jumbotron text-center">
-        <!--RESTORE THIS LATER-->
-        <!--<h1>DevDiary</h1>-->                            <!--RESTORE THIS LATER-->
-        <!--<div>-->                                                   <!--CHANGE-->
-        <!--<br>-->                                                <!--CHANGE-->
         <h1 align="center">DevDiary</h1>                    <!--CHANGE-->
     </div>
 
     <div class="container">
-        <!--ADDED-->
         <div class="row">
-            <!--ADDED-->
             <div class="col-sm-12">
-                <!--ADDED-->
                 <h3><a href="001.html">HOME</a></h3>        <!--ADDED-->
             </div>                                          <!--ADDED-->
         </div>                                              <!--ADDED-->
@@ -60,16 +43,31 @@
         <br><hr>
         <div class="row">
             <div class="col-sm-6">
-                <h3>Project 3: MVC + SQL</h3>
-                <img src="images2/MVC001b.png" id="D001" />
+                <!--<h3>Relational Database Design</h3>-->
+                <img src="images3/SQL000a.png" id="D003" />
             </div>
             <div class="col-sm-6">
-                <h3>Jazz CDs</h3>
-                <p>(18/08/2019) - I built this application to become familiar with the MVC framework.</p>
-                <p>From the first screenshot you can see that I used a partial view to display two tables at the same time (product table and cart table).</p>
-                <p>xxxxxxxxxxxxxxx</p>
-                <p>xxxxxxxxxxxxxxx</p>
-                <p>NOTE: Here is a link to the project - <a href="http://www.jazzcd.damienasp2.com/Home/Home" target="_blank">PROJECT3</a></p>
+                <h3>Relational Database Design</h3>
+                <p>This diagram (database schema) shows the relationship between two tables.</p>
+                <p>The author table contains one instance of each author.</p>
+                <p>The book table can contains many instances of the same author.</p>
+                <p>This is an example of a "one-to-many" relationship.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>"Author Table" Design</h3>
+                <img src="images3/SQL001.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>"Author Table" Design</h3>
+                <p>This table has three columns.</p>
+                <p>AuthorId column (Primary Key), AuthorName column and AuthorDOB column.</p>
+                <p>AuthorId column = Identity column.</p>
+                <p></p>
             </div>
         </div><br><hr>
     </div>
@@ -79,17 +77,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>ADD Product to Cart</h3>            
-                <img src="images2/MVC002.png" id="D003" />
+                <h3>"Author Table" Data</h3>
+                <img src="images3/SQL002b.png" id="D003" />
             </div>
             <div class="col-md-6">
-                <h3>Shop Tab</h3>  
-                <p>When the ADD button is clicked in the product table, the id of the product is sent to this action method "ADD".</p>
-                <p>This method is contained inside the "ProductTables" controller.</p>
-                <p>This id parameter is used to find the name of the product and then to determine whether the cart contains one of these products.</p>
-                <p>If it doesn't, an object for the cart table is created, assaigned the appropriate values and is added to the cart table.</p>
-                <p>If the product already exists in the cart table then the quantity is incremented.</p>
-                <p>NOTE: Here is a link to the code for this controller - <a href="https://github.com/damien5215/MVC_JazzCDs1/blob/master/Controllers/ProductTablesController.cs" target="_blank">ProductTablesController</a></p>
+                <h3>"Author Table" Data</h3>
+                <img src="images3/SQL002a.png" id="D003" />
+                <p>This shows the data (first 1000 rows) entered into the table.</p>
+                <p>This table contains one instance of each author.</p>
+                <p>The name of the database is "BooksDB001".</p>
+                <p></p>
             </div>
         </div><br><hr>
     </div>
@@ -99,22 +96,263 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>SQL Design Issue</h3>
-                <img src="images2/MVC003.png" id="D012" />
+                <h3>"Book Table" Design</h3>
+                <img src="images3/SQL003.png" id="D005" />
             </div>
             <div class="col-md-6">
-                <h3>Missing Primary/Foreign Key Constraint</h3>
-                <!--<img src="images2/JSON001.png" id="D012" />-->
-                <p>When I created the database I forgot to set up a primary and foreign key constraint between these tables.</p>
-                <p>The cart table should have a ProductID parameter rather than the Name, Price and Image parameters.</p>
-                <p>This way the product table would act as a kind of look-up or reference table for the cart table.</p>
-                <p>When I remake this project I will rectify this.</p>
+                <h3>"Book Table" Design</h3>
+                <p>This table has four columns.</p>
+                <p>BookId (PK), BookTitle, AuthorId and Price.</p>
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
         </div><br><hr>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>"Book Table" Foreign Key</h3>
+                <img src="images3/SQL004.png" id="D005" />
+            </div>
+            <div class="col-md-6">
+                <h3>"Book Table" Foreign Key</h3>
+                <p>I used this instruction to generate the "Foreign Key" constraint.</p>
+                <p><i>ALTER TABLE [dbo].[BookTable]</i></p>
+                <p><i>WITH CHECK ADD FOREIGN KEY([AuthorId])</i></p>
+                <p><i>REFERENCES [dbo].[AuthorTable] ([AuthorId])</i></p>
+            </div>
+        </div><br><hr>
+    </div>
 
-    <!--<br>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>"Book Table" Data</h3>
+                <img src="images3/SQL005b.png" id="D005" />
+            </div>
+            <div class="col-md-6">
+                <h3>"Book Table" Data</h3>
+                <img src="images3/SQL005a.png" id="D005" />
+                <p>This shows the data (first 1000 rows) entered into the table.</p>
+                <p>Rows 2, 7 and 8 has the same author hence the ids are all the same; "2".</p>
+                <p>According to the "author table", 2 = "Jean Paul Sartre"</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>INNER JOIN</h3>
+                <img src="images3/SQL006b.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>INNER JOIN</h3>
+                <img src="images3/SQL006a.png" id="D011" />
+                <p>In this table there are three instances of the author "Jean Paul Sartre".</p>
+                <p><i>SELECT BookTable.Price, BookTable.BookTitle, AuthorTable.AuthorName, AuthorTable.AuthorDOB FROM BookTable INNER JOIN AuthorTable ON BookTable.AuthorId = AuthorTable.AuthorId;</i></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>"Author Table" Data</h3>
+                <img src="images3/SQL007.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Added Another Author</h3>
+                <img src="images3/SQL002a.png" id="D011" />
+                <p>Added another author to the table; 7, "Evelyn Waugh", "28/10/1903".</p>
+                <p>In "BookTable" this author id (7) doesn't exist.</p>
+                <p>Therefore for the "INNER JOIN" query, it doesn't show.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>FULL OUTER JOIN</h3>
+                <img src="images3/SQL008a.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>FULL OUTER JOIN</h3>
+                <img src="images3/SQL008b.png" id="D011" />
+                <p>All of the data in both tables are shown.</p>
+                <p>Therefore even though AuthorId = 7, doesn't exist in BookTable, it appears.</p>
+                <p><i>SELECT BookTable.Price, BookTable.BookTitle, AuthorTable.AuthorName, AuthorTable.AuthorDOB FROM BookTable FULL OUTER JOIN AuthorTable ON BookTable.AuthorId = AuthorTable.AuthorId;</i></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>UDF (scalar): CartIndex</h3>
+                <img src="images3/cart000.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>UDF (scalar): CartIndex</h3>
+                <p>This UDF can be used to generate a sequential id.</p>
+                <p>If a CRUD application only deletes the last row of a table.</p>
+                <p>This can make sure the id values are sequential.</p>
+                <br>
+                <p>When this UDF is called it returns an integer.</p>
+                <p>The number of rows inside CartTable + 1.</p>
+                <p><i>((SELECT COUNT(*) FROM [CartTable]) + 1)</i></p>
+                <p>If there are two rows in the table then the function will return the value "3".</p>
+                <p>A table named "CartTable" does not exist yet and will be made next.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>CartTable Design</h3>
+                <img src="images3/cart001a.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Two Columns</h3>
+                <p>This shows the design of CartTable.</p>
+                <p>CartId column (Primary Key).</p>
+                <p>BookId column.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>CartTable, CartId</h3>
+                <img src="images3/cart001b.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>CartId, UDF</h3>
+                <p>Default Value or Binding = <i>([dbo].[CartIndex]())</i></p>
+                <p>When this function/script is called an index will be returned.</p>
+                <p>The screenshots below show how the UDF is executed.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Call Function</h3>
+                <img src="images3/cart003.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Values Returned</h3>
+                <img src="images3/cart004.png" id="D011" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Delete Last 2 Rows</h3>
+                <img src="images3/cart005.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Delete Last 2 Rows</h3>
+                <img src="images3/cart006.png" id="D011" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Add New Row</h3>
+                <img src="images3/cart007.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>New Row Added</h3>
+                <img src="images3/cart008.png" id="D011" />
+                <!--<p>The table had four rows of data and the last two rows were deleted.</p>
+                    <p>Executing the script should generate and enter a CartId of "3".</p>
+                    <p>CartId = 3, BookId = 2</p>-->
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Delete Row</h3>
+                <img src="images3/cart009.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Row Deleted</h3>
+                <p>The row about to be deleted is not the last row that was created.</p>
+                <p>This will make the data inside CartId column, non-sequential.</p>
+                <p>This will lead to an error which is shown in the following screenshots.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Row Deleted</h3>
+                <img src="images3/cart010.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Add New Row (Error)</h3>
+                <img src="images3/cart011a.png" id="D011" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Error (Primary Key)</h3>
+                <img src="images3/cart011b.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Error (Primary Key)</h3>
+                <p>There are two rows in the table therefore when the UDF is called it will return "3".</p>
+                <p>However this CartId value "3" already exist in row 2</p>
+                <p>The values in the column are not sequential due to data being deleted.</p>
+                <p>The primary key constraint doesn't allow the column to contain the same value.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Remove Primary Key</h3>
+                <img src="images3/cart012.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Add New Row</h3>
+                <img src="images3/cart014.png" id="D011" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>New Row Added</h3>
+                <img src="images3/cart015.png" id="D011" />
+            </div>
+            <div class="col-md-6">
+                <h3>Solution</h3>
+                <p>The Primary Key constraint has been removed from the column.</p>
+                <p>When the UDF is called the value is now entered into the table.</p>
+                <p>This solves the issue <b>IF</b> the table doesn't need the CartId to be set as the primary key.</p>
+            </div>
+        </div><br><hr>
+    </div>
 
     <br>
     <br>
