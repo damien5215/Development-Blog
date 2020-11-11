@@ -1,4 +1,6 @@
-# Development-Blog, this website is live: http://www.text.damienasp.com/001.html
+# Development-Blog
+
+This website is live: http://www.text.damienasp.com/001.html
 
 It is a hand-coded blog which showcases the projects that I've been working on at JustIT and at Treehouse (self-studying) -
 
