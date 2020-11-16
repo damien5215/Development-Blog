@@ -1,6 +1,8 @@
-# Development-Blog, this website is live: http://www.text.damienasp.com/001.html
+# Development-Blog
 
-It is a hand-coded blog which showcases the projects that I've been working on at JustIT and at Treehouse (self-studying) -
+This website is live: http://www.text.damienasp.com/001.html
+
+It is a hand-coded blog which shows the projects that I've been working on at JustIT and at Treehouse (self-studying) -
 
 01. A basic Text Editor built using ASP.NET (webforms), HTML, CSS, C#.
 02. A website to showcase some code which solves problems on HackerRank. It was built using ASP.NET, HTML, CSS and JavaScript.
