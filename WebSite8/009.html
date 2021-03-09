@@ -220,6 +220,84 @@
         </div><br><hr>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Artist Class</h3>
+                <img src="images7/efMmig09a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Add "Bio" Property</h3>
+                <p>Added a new property to the "Artist" class.</p>
+                <p>"Bio" is a string.</p>
+                <p>The property has the data annotation [Required] which makes it non-nullable.</p>
+                <p>Making this change, means that the data model has been altered.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>PM Console: Add-Migration</h3>
+                <img src="images7/efMmig10a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>New Migration: "AddBioToArtist"</h3>
+                <p>A new migration is created and named "AddBioToArtist".</p>
+                <p>In the screenshots below you can see that the new migration file has been added with a time-stamp.</p>
+                <p>You can also see the Up and Down method.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Solution Explorer</h3>
+                <img src="images7/efMmig11a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>New Migration: "AddBioToArtist"</h3>
+                <img src="images7/efMmig11b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Configuration.cs</h3>
+                <img src="images7/efMmig12a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Update Seed Method</h3>
+                <p>In the seed method, the Artist objects now need a "Bio".</p>
+                <p>For both of the artist objects in the seed method, the Bio property has been set to "TBD".</p>
+                <p>Without this, when updating the database, an error would occur because "Bio" is required.</p>
+                <p>In the screenshots below the command "update-database" is entered into the PM Console.</p>
+                <p>The "AddBioToArtist" migration is applied and the seed method is executed.</p>
+                <p>In the Artist table, you can see that a new column has appeared for the "Bio".</p>
+                <p></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>PM Console</h3>
+                <img src="images7/efMmig12b.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Artist Table</h3>
+                <img src="images7/efMmig13a.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+
+
     <!--<div class="container">
         <div class="row">
             <div class="col-sm-6">
