@@ -107,12 +107,9 @@
             </div>
             <div class="col-sm-6">
                 <h3>Migrations/Initial.cs</h3>
-                <!--<img src="images7/efMmig02b.png" id="D003" />-->
                 <p>The intial class contains two methods, up and down.</p>
                 <p>The "Up" method contains code to update the database to be in sync wth the model that was used to generate this migration.</p>
                 <p>The "Down" method contains code to remove the updates that were applied in the "Up" method, so that the database will be in sync with the previous version of the model.</p>
-                <!--<p>dssdds</p>-->
-                <!--<p>dssdds</p>-->
             </div>
         </div><br><hr>
     </div>
@@ -138,7 +135,6 @@
             </div>
             <div class="col-sm-6">
                 <h3>Set Database Name</h3>
-                <!--<img src="images7/efMmig03c.png" id="D003" />-->
                 <p>The app.config file contains the connection string.</p>
                 <p>The "Initial Catalog" parameter defines the name of the database the EF will generate.</p>
                 <p>The sceenshots below show "updating the database."</p>
@@ -184,7 +180,6 @@
             </div>
             <div class="col-sm-6">
                 <h3>Populate Database</h3>
-                <!--<img src="images7/efMmig05b.png" id="D003" />-->
                 <p>Deleting the database and running the "update-database" command again.</p>
                 <p>The database is created again.</p>
                 <p>The seed method is executed whch populates the database with data.</p>
@@ -304,9 +299,8 @@
             </div>
             <div class="col-sm-6">
                 <h3>Downgrade to "Initial" Migration</h3>
-                <!--<img src="images7/efMmig13a.png" id="D003" />-->
                 <p>Both migrations have been applied again.</p>
-                <p> To downgrade database, type "update-database -targetmigration Initial".</p>
+                <p>To downgrade database, type "update-database -targetmigration Initial".</p>
                 <p>This reverts the "AddBioToArtist" migration.</p>
                 <p>Now the migration history table only shows the initial migration.</p>
                 <p>The next two screenshots show this process.</p>
@@ -323,6 +317,61 @@
             <div class="col-sm-6">
                 <h3>Migration History Table</h3>
                 <img src="images7/efDown03a.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Artist Table</h3>
+                <img src="images7/efDown03b.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Downgrade to "Initial" Migration</h3>
+                <p>The "Bio" column has been removed from the table.</p>
+                <p>In the "Artist" class the "Bio" property still exists.</p>
+                <p>The seed method, in the configuraion class, still contains code related to the "Bio" property.</p>
+                <p>The next two screenshots show this.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Artist Model</h3>
+                <img src="images7/efDown03d.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Configuration Class</h3>
+                <img src="images7/efDown03e.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Revert All Migrations</h3>
+                <img src="images7/efDown04a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>All Tables Removed From DB</h3>
+                <img src="images7/efDown04b.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Applying All Migrations</h3>
+                <img src="images7/efDown05a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Migration History Table</h3>
+                <img src="images7/efDown05b.png" id="D003" />
             </div>
         </div><br><hr>
     </div>
