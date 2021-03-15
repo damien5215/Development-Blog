@@ -380,9 +380,10 @@
                 <img src="images7/efMmig06a.png" id="D003" />
             </div>
             <div class="col-sm-6">
-                <h3>Updating Model</h3>
+                <h3>Updating ComicBook Model</h3>
                 <!--<img src="images7/efDown05b.png" id="D003" />-->
-                <p>fdffd</p>
+                <p>The "Average Rating" property in the comicbook class was replaced with "CBAverageRating" as ICollection.</p>
+                <p>Now, each comic book can have a history of average ratings.</p>
             </div>
         </div><br><hr>
     </div>
@@ -394,8 +395,22 @@
                 <img src="images7/efZ01.png" id="D003" />
             </div>
             <div class="col-sm-6">
+                <h3>ComicBook Class</h3>
+                <img src="images7/efZ01a.png" id="D003" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
                 <h3>modelBuilder.Entity<>()</h3>
-                <img src="images7/efZ02.png" id="D003" />
+                <img src="images7/efZ02a.png" id="D003" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Context.cs</h3>
+                <!--<img src="images7/efZ02.png" id="D003" />-->
+                <p>This part of the code had to be updated.</p>
             </div>
         </div><br><hr>
     </div>
@@ -416,16 +431,16 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <h3>Configuration.cs</h3>
+                <h3>PM Console: add-migration addCBAREntity</h3>
                 <img src="images7/efZ05.png" id="D003" />
             </div>
             <div class="col-sm-6">
-                <h3>Comment Out Seed Method</h3>
+                <h3>Add Migration (addCBAREntity)</h3>
                 <!--<img src="images7/efZ03b.png" id="D003" />-->
-                <p>dsdssdsd</p>
-                <p>dsdssdsd</p>
-                <p>dsdssdsd</p>
-                <p>dsdssdsd</p>
+                <p>These changes are saved by adding a migration called "addCBAREnitity".</p>
+                <p>Then the up() and down() methods inside the migration class file is altered.</p>
+                <p>The up() method populates the CBAverage table.</p>
+                <p>The down() method populates the ComicBook.AverageRating column.</p>
             </div>
         </div><br><hr>
     </div>
@@ -450,8 +465,14 @@
                 <img src="images7/efMMC03.png" id="D003" />
             </div>
             <div class="col-sm-6">
-                <h3>fdfdfdfddfdf</h3>
+                <h3>update-database</h3>
                 <!--<img src="images7/efMMC02.png" id="D003" />-->
+                <p>All of the migrations are applied.</p>
+                <p>The "Average Rating" column from the ComicBook table is removed.</p>
+                <p>The CBAverageRating Table is created.</p>
+                <p>Two rows were added manually to the CBAR table for ComicBookID = 1.</p>
+                <p>The database is then downgraded</p>
+                <p>The latest CBAverageRating value is transfered to the ComicBook.AverageRating column.</p>
             </div>
         </div><br><hr>
     </div>
