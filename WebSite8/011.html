@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            width: 100%;
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 align="center">DevDiary</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3><a href="001.html">HOME</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <h3><a href="Projects.html">PROJECTS</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <!--<h3><a target="_blank" href="https://github.com/damien5215">GITHUB</a></h3>-->
+            </div>
+            <div class="col-sm-3">
+                <!--<h3><a href="Links.html">LINKS</a></h3>-->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <br><hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Project 3: Products Page</h3>
+                <img src="images9/page1.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Main Features</h3>
+                <br>
+                <p><b>DROPDOWN LIST</b> <br>The user can filter the list of books via the author's name. It is a form which posts the AuthorID back to the server.</p>
+                <p><b>BOOK LIST</b> <br>The page displays a list of the books in the database.</p>
+                <p><b>CART LIST</b> <br>The page displays a list of the books in the cart which can be updated and is a partial page.</p>
+                <p><b>TOTAL COST</b> <br>The page displays the total cost of the items in the cart. It is a partial page.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Database Schema Diagram</h3>
+                <img class="devBlog" src="images9/db03.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Relational Database Design</h3>
+                <p>There are six tables.</p>
+                <p>(N) means navigation property.</p>
+                <p>There are five "One to Many" relationships and one "Many to Many".</p>
+                <p>BookGenre is a bridge-entity, used for the "Many to Many" relationship between "Book" and "Genre".</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Context</h3>
+                <img class="devBlog" src="images9/context1.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Base Controller</h3>
+                <img class="devBlog" src="images9/products01.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BooksController: Products()</h3>
+                <img class="devBlog" src="images9/productsController01.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>ProductsViewModel</h3>
+                <img class="devBlog" src="images9/ProductsViewModel.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>BooksBaseViewModel</h3>
+                <img class="devBlog" src="images9/Products06.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Repository: GetAuthorList() + GetProducts()</h3>
+                <img class="devBlog" src="images9/Products04a.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Products View: Drop Down and TotalCost</h3>
+                <img class="devBlog" src="images9/Products07.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Products View: List of Books</h3>
+                <img class="devBlog" src="images9/products08.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Products View: Cart Partial View</h3>
+                <img class="devBlog" src="images9/Products09.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>CartController: _Cart()</h3>
+                <img class="devBlog" src="images9/products10.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Repository: "GetCart()"</h3>
+                <img class="devBlog" src="images9/RepoGetCart.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Repository: "GetCart()"</h3>
+                <p>This _Cart action method retrieves the full list of cart objects from the repository, loads it to the variable "books" and then sends this object to the partial view.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Partial View: "_Cart"</h3>
+                <img class="devBlog" src="images9/Products11.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Rendered HTML for "_Cart"</h3>
+                <img class="devBlog" src="images9/cartDisplay.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>TotalCostViewModel</h3>
+                <img class="devBlog" src="images9/totalCost01.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Cart Controller: "_TotalCost()"</h3>
+                <img class="devBlog" src="images9/totalCost02.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Partial View: "_TotalCost"</h3>
+                <img class="devBlog" src="images9/totalCost03.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>ViewBag vs ViewModel</h3>
+                <p>Initially I used ViewBag to hold the calculated "total price" value and send it to the view.</p>
+                <p>I replaced this with a ViewModel which only has one property and a constructor.</p>
+                <p>It inherits from the Base ViewModel however this is not necessary as it doesn't need any of the properties or methods defined in the base ViewModel.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Products View: ActionLink (.../Cart/Add/Id)</h3>
+                <img class="devBlog" src="images9/AddFunction1.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>ActionLink: Rendered HTML</h3>
+                <img class="devBlog" src="images9/AddFunction2.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Products View: ActionLink (.../Cart/Add/Id)</h3>
+                <img class="devBlog" src="images9/AddFunction3.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>CartController: Add(id), Get Data</h3>
+                <img class="devBlog" src="images9/add01.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>CartController: Add(id), If "Cart is NULL"</h3>
+                <img class="devBlog" src="images9/add02.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>CartController: Add(id)</h3>
+                <p>var book, holds the data for a specific book object with the id that was passed into the Add() method.</p>
+                <p>var cart, holds the data for a specifc cart object with the id that was passed into the Add() method.</p>
+                <p>var cartList, holds a list of all of the cart objects in the cart.</p>
+                <p>If "var cart" is null then it could not find the item in the cart table so a new cart object is constructed and added to the cart table.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>CartController: Add(id), Else "Increment Quantity"</h3>
+                <img class="devBlog" src="images9/add03.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Repository: EditCart(Cart)</h3>
+                <img class="devBlog" src="images9/editCart.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>CartController: Add(id), Else "Increment Quantity"</h3>
+                <img class="devBlog" src="images9/ProductsPOST1.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Repository: EditCart(Cart)</h3>
+                <img class="devBlog" src="images9/ProductsPOST2.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Added EF Migration (BookShared)</h3>
+                <img class="devBlog" src="images9/mig03.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>"202106281332275_Initial"</h3>
+                <p>I enabled ef migrations and then added an "initial" migration.</p>
+                <p>When the database is upgraded, the database is created, empty.</p>
+                <p>When the database is downgraded, the database is dropped.</p>
+                <p>The seed method in the configuration puts test data into the database that I'm using locally.</p>
+                <p>Whenever I deploy this webapp, I comment out the "seed data" in the seed method show below.</p>
+                <p>This ensures that the test data doesn't interfere with the data in the server database.</p>
+                <p>I also created a .bak file for the server database in case I need to restore the server database.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>202106281332275_Initial.cs</h3>
+                <img class="devBlog" src="images9/mig01.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Configuration.cs</h3>
+                <img class="devBlog" src="images9/mig02.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>KNOWN ISSUES</h3>
+                <p>When adding a book to the cart, all that needs to be updated is the partial view, "_Cart" however currently the whole page is rendered.</p>
+                <p>On ".../Books/Products" page, the selected dropdown value resets when an item is added to the cart.</p>
+                <p>Currently there isn't a controller for Authors.</p>
+                <p>For the CRUD page (.../Books/Index) client and server validation needs to be implemented.</p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Ajax Calls</h3>
+                <p>To solve the problems described I created a new contoller called "test" and reorgansied the code.</p>
+                <p>".../Test/Products" - The book table is now a "partial page".</p>
+                <p>When the add and remove butoons are clicked, Ajax calls reload the "_Cart" parital page.</p>
+                <p>Also the dropdown filter buttons are also using Ajax calls to reload the "_Book" partial page.</p>
+                <p>NOTE - The older version of the "Products" page, that doesn't use Ajax to do the post-backs to the server, can be accessed using this URL: <a href="http://www.damienaspbooks.com/Main/Products" target="_blank">.../Main/Products</a></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>jQuery: AddToCart</h3>
+                <img class="devBlog" src="images9/js01.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>AddToCart Button</h3>
+                <p>All of the buttons belong to the class "btnAdd".</p>
+                <p>When one of them is clicked, the "_TotalCost" parital page is set to hidden and the id of the book of the corresponding button, is sent to "/Cart/AddToCart".</p>
+                <p>Once this is completed the "_Cart" partial page is reloaded and the "TotalCost" method is called.</p>
+                <p>Once the new total cost is calculated, the "_TotalCost" partial page is reloaded.</p>
+                <p>The remove from cart follows a similar procedure.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>jQuery: DropDown Functions</h3>
+                <img class="devBlog" src="images9/js02.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>"Filter Books"</h3>
+                <p>When an author is seleced and the "Filter Books" button is clicked, the id of the selected author is loaded to the variable x1.</p>
+                <p>Then an Ajax call is made and the id is posted to "/Test/_Book".</p>
+                <p>Once this function has executed, the "_Book" parital page is reloaded and the filtered list appears.</p>
+                <!--<p>When the "Reset Filter" button is clicked another Ajax call is made (GET) to "/Test/_Book".</p>-->
+                <!--<p>Once this function has executed, the "_Book" parital page is reloaded and the full list of books reloads.</p>-->
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>jQuery: DropDown Functions</h3>
+                <img class="devBlog" src="images9/js03.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>"Reset Filter"</h3>
+                <p>When the "Reset Filter" button is clicked another Ajax call is made (GET) to "/Test/_Book".</p>
+                <p>Once this function has executed, the "_Book" parital page is reloaded and the full list of books reloads.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Test: Filter by "String"</h3>
+                <p>I also implemented a search textbox which allows the user to filter the list of books by - </p>
+                <p>"Book Title"</p>
+                <p>"Author Name"</p>
+                <p>"Genre"</p>
+                <p>This page can be accessed using this URL - <a href="http://www.damienaspbooks.com/Test/ProductsTest" target="_blank">.../Test/ProductsTest</a></p>
+            </div>
+            <div class="col-sm-6">
+                <p></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Rendered View</h3>
+                <img class="devBlog" src="/images9/search01.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>jQuery: "Filter Button"</h3>
+                <img class="devBlog" src="/images9/search02.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>View: ProductsTest</h3>
+                <img class="devBlog" src="/images9/search01b.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Test Controller: POST Method</h3>
+                <img class="devBlog" src="/images9/search03.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>jQuery: DropDown Functions</h3>
+                <img class="devBlog" src="/images9/search05.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Test Controller: POST Method</h3>
+                <img class="devBlog" src="/images9/search06.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Four Controllers</h3>
+                <img class="devBlog" src="/images9/controllers.png" />
+            </div>
+            <div class="col-sm-6">
+                <h3>Description</h3>
+                <p>The books controller handles all of the requests for the book CRUD operations.</p>
+                <p>The cart controller handles all of the requests for the cart. Some of these methods are called by jQuery Ajax.</p>
+                <p>The main controller handles all of the requests for the main site. None of these action-methods are called by Ajax.</p>
+                <p>The test controller, contains some action-methods which are accessed via Ajax calls.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
