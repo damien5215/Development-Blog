@@ -129,8 +129,81 @@
         </div><br><hr>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Index View (.../Home/Index)</h3>
+                <img src="images10/SL07.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Partial View ("_Summary")</h3>
+                <img src="images10/SL08.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Partial View ("_Editor")</h3>
+                <img src="images10/SL09.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Rendered HTML (.../Home/Index)</h3>
+                <img src="images10/SL09b.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Web Controller (API)</h3>
+                <img src="images10/SL10.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Chrome Recieves XML (.../api/web)</h3>
+                <img src="images10/SL11.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Chrome Recieves XML (.../api/web/2)</h3>
+                <img src="images10/SL12.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Rendered HTML (.../Home/Index)</h3>
+                <p>Http Request => MVC => HTML</p>
+                <p>Http Request => API => JSON/XML</p>
+                <p>Entering ".../api/web" into the URL, triggers the API Web controller. It doesn't pass a parameter so the controller selects the "GetFullList" method because it is the only "HttpGet" method in the controller that doesn't take in a parameter.</p>
+                <p>In Google Chrome, the response from the API controller is recieved as XML.</p>
+                <p>In this example, (...api/web/2) the integer "2" is passed to the controller. The "GetRecord" method is triggered and the data for the record with "id = 2", gets sent to the client.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>WebApiConfig.cs</h3>
+                <img src="images10/SL13.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Global.asax.cs</h3>
+                <img src="images10/SL14.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+
 
 </body>
 </html>
