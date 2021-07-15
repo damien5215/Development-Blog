@@ -62,12 +62,16 @@
         <br><hr>
         <div class="row">
             <div class="col-md-6">
-                <h3> ASP.NET, Console App, EF Code First Migrations</h3>
-                <img src="images7/efDown05a.png" />
+                <h3>ASP.NET, MVC, jQuery, Ajax + Knockout</h3>
+                <img src="images10/page01.png" />
             </div>
             <div class="col-md-6">
-                <h3>EF Code First Migrations</h3>
-                <p>d</p>
+                <h3>RESTful Web API and SPA</h3>
+                <p>This example is from "Pro ASP.NET MVC 5" by Adam Freeman (It is the last example in the book).</p>
+                <p>Initially you build the SPA with an MVC controller and pass objects to a view to be rendered.</p>
+                <p>Once the app is built, you add an api controller and install a few packages (bootstrap, jQuery and Knockout).</p>
+                <p>Then you shift the complextity from the MVC controller to the API controller.</p>
+                <p>Finally Knockout and jQuery are used to obtain data via AJAX which is binded to the HTML elements.</p>
             </div>
         </div><br><hr>
     </div>
@@ -205,10 +209,11 @@
                 <img src="images10/SL30.png" />
             </div>
             <div class="col-md-6">
-                <h3>Global.asax.cs</h3>
-                <p>dsd</p>
-                <p>dsd</p>
-                <p>dsd</p>
+                <h3>Defining the Model</h3>
+                <p>This code defines the model</p>
+                <p>The shoppingList parameter will hold the data retrieved from the server.</p>
+                <p>Editor is for when the user enters some values for a new record.</p>
+                <p>Display Summary can be turn on or off. When the use clicks on "Create" the summary disappears until the new record is posted.</p>
             </div>
         </div><br><hr>
     </div>
@@ -220,10 +225,14 @@
                 <img src="images10/SL31.png" />
             </div>
             <div class="col-md-6">
-                <h3>Global.asax.cs</h3>
-                <p>dsd</p>
-                <p>dsd</p>
-                <p>dsd</p>
+                <h3>Get Server Info, Populate Model, Update HTML</h3>
+                <p>The "send ajax request" is defined here and takes in four parameters: httpMethod, callback, url and reqData.</p>
+                <p>For testing purposes I have included some console.log statements.</p>
+                <p>Once the Ajax call has completed (200), the callback function is called.</p>
+                <p>"getAllItems()", this function uses the "send ajax request" function. It only passes two parameters, "GET" and the callback.</p>
+                <p>The data parameter conatins the data retrieved from the server and is used to update the model which is then binded to the html.</p>
+                <p>Below shows the DELETE function which doesn't use the reqData parameter but does pass the "Id" of the product as the "url" variable (.../api/web/Id).</p>
+                <p>The POST method is triggered when the user enters some data into "editor" and clicks SAVE. The "url" parameter is "null" but the reqData contains the key-value pairs for the two parameters (ProductName and Quantity).</p>
             </div>
         </div><br><hr>
     </div>
@@ -244,15 +253,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>"Handle Create Click"</h3>
                 <img src="images10/SL34.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
-                <!--<img src="images10/SL35.png" />-->
-                <p>dsd</p>
-                <p>dsd</p>
-                <p>dsd</p>
+                <h3>Initial Page Load</h3>
+                <p>When the "Create" button is clicked this function is triggered.</p>
+                <p>It hides the Summary HTML block so that the user can focus on entering a new entry.</p>
+                <p>The "document ready" function waits until the page has loaded before it executes.</p>
+                <p>When the page first loads, "getAllItems" is called and the bindings are aplied.</p>
             </div>
         </div><br><hr>
     </div>
@@ -260,11 +269,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Replace "Summary" HTML</h3>
                 <img src="images10/SL35.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Replace "Editor" HTML</h3>
                 <img src="images10/SL36.png" />
             </div>
         </div><br><hr>
@@ -273,15 +282,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Update "Home" MVC Controller</h3>
                 <img src="images10/SL37.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
-                <!--<img src="images10/SL38.png" />-->
-                <p>dsd</p>
-                <p>dsd</p>
-                <p>dsd</p>
+                <h3>One Function (SPA)</h3>
+                <p>The "Home" MVC controller now only contains one function that returns a view.</p>
+                <p>It doesn't pass an object to the view, it just renders a view (.../Home/Index).</p>
+                <p>All of the events on the page are handled by the jQuery, AJAX and Knockout.</p>
             </div>
         </div><br><hr>
     </div>
@@ -289,15 +297,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Chrome Dev Tool</h3>
                 <img src="images10/SL23.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
-                <!--<img src="images10/SL23b.png" />-->
-                <p>dsd</p>
-                <p>dsd</p>
-                <p>dsd</p>
+                <h3>When the Page Loads</h3>
+                <p>When the page (.../Home/Index) loads a call to the server is made to get the products (food).</p>
+                <p>At the bottom of the list is "web". This is the call to the GET method.</p>
+                <p>In the next screenshots it shows the contents of the request and the response's header.</p>
             </div>
         </div><br><hr>
     </div>
@@ -305,11 +312,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Chrome: Get Request Info</h3>
                 <img src="images10/SL23b.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Chrome: Response Info</h3>
                 <img src="images10/SL24.png" />
             </div>
         </div><br><hr>
@@ -318,12 +325,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>".../Home/Index" View</h3>
                 <img src="images10/SL38.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Create Function Triggers POST </h3>
                 <img src="images10/SL39.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Book: PRO ASP.NET MVC 5</h3>
+                <img src="images10/book01.jpg" />
+            </div>
+            <div class="col-md-6">
+                <h3>Book</h3>
+                <!--<img src="images10/SL39.png" />-->
+                <p>This code came from the last example in this book.</p>
             </div>
         </div><br><hr>
     </div>
