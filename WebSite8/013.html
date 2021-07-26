@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            width: 100%;
+            height: 100%;
+        }
+
+        #D017 {
+            width: 517px;
+            height: 246px;
+        }
+
+        h1 {
+            text-align:"center";
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 align="center">DevDiary</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3><a href="001.html">HOME</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <h3><a href="Projects.html">PROJECTS</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <!--<h3><a target="_blank" href="https://github.com/damien5215">GITHUB</a></h3>-->
+            </div>
+            <div class="col-sm-3">
+                <!--<h3><a href="Links.html">LINKS</a></h3>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <br><hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Model: ShoppingList</h3>
+                <img src="images13/model01.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Interface: Shopping Repository</h3>
+                <img src="images13/IShoppingRepo.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>MockShoppingRepo: Create List</h3>
+                <img src="images13/MockRepo01.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>MockShoppingRepo: 2 Methods</h3>
+                <img src="images13/MockRepo02.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Shopping Repo: Initial Data</h3>
+                <img src="images13/DI01.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Startup: Configure Services</h3>
+                <p>In order to implement dependancy injection for the controller I added the line - </p>
+                <p><i>services.AddScoped&lt;IShoppingRepo, MockShoppingRepo()&gt;</i></p>
+                <p>Setting the service lifetime to "Scoped" means that instances of the object are created, once per client request.</p>
+                <p>Singleton means, 'the same object, for every request'.</p>
+                <p>Transient means, 'new instance created for every request'.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>ShoppingListsController: Constructor</h3>
+                <img src="images13/SLcontroller01.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Controller: Dependency Injection</h3>
+                <p>The controller inherits from ControllerBase</p>
+                <p>A private field is defined (_repository).</p>
+                <p>When an instance of the contoller class is created, it recieves an instance of the IShoppingList repository.</p>
+                <p>This is set to the private field so the the methods inside the controller can access the properties and methods from the repository.</p>
+                <p>These methods, declared in the interface have to be defined in the controller.</p>
+                <p>The details of these methods can be seen in the next two screenshots.</p>
+                <p>They are both HttpGET except one method accepts an integer parameter.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>ShoppingListsController: Get All Items</h3>
+                <img src="images13/SLcontroller02.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>ShoppingListsController: Get Item By Id</h3>
+                <img src="images13/SLcontroller03.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>PostMan: Test API, Get All Items</h3>
+                <img src="images13/api01.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>PostMan: Test API, Get Item By Id</h3>
+                <img src="images13/api02.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+</html>
