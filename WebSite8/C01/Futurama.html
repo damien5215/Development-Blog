@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin: 4px;
+            padding-top: 3px;
+            padding-right: 3px;
+            padding-bottom: 5px;
+            padding-left: 12px;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -16,64 +27,52 @@
     <button onclick="myFunction1()">Get Info From API</button>
     <br><br>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-2">
-                <p id="newContent"></p>
-            </div>
-            <div class="col-xs-6">
-                <p id="newQuote"></p>
-            </div>
-            <div class="col-xs-4">
-                <img id="newImg" height="100" />
-            </div>
-        </div>
+    <div id="container">
+
     </div>
 
-    <script>
-        var api_url = "https://futuramaapi.herokuapp.com/api/quotes?search=";
 
+
+
+
+    <script>
 
         async function getapi(url) {
 
-            var userText = document.getElementById("inputText").value;
-
-            //api_url = "https://futuramaapi.herokuapp.com/api/quotes?search=" + userText;
-    
             // Storing response
             const response = await fetch(url);
-    
+
             // Storing data in form of JSON
             var data = await response.json();
 
             console.log(data);
-            console.log(data[0]);
-            console.log(data[0].character);
+            //console.log(data[0]);
+            //console.log(data[0].character);
             console.log(url);
-            console.log(userText);
-            console.log(data.length);
+            //console.log(data.length);
 
-            //document.getElementById('newContent').innerHTML = data[0].character;
-            //document.getElementById('newQuote').innerHTML = data[0].quote;
-            //document.getElementById('newImg').src = data[0].image;
+            var container = document.getElementById("container");
 
-            for (let i = 0; i < data.length; i++) {
-                document.getElementById('newContent').innerHTML = data[i].character;
-  
-                document.getElementById('newQuote').innerHTML = data[i].quote;
-
-                document.getElementById('newImg').src = data[i].image;  
+            for (var i = 0; i < data.length; i++) {
+                container.innerHTML += '<div class="container-fluid"><div class="row"><div class="col-xs-2"><p id="newContent">' + data[i].character +
+                                       '</p></div><div class="col-xs-6"><p id="newQuote">' + data[i].quote + 
+                                       '</p></div><div class="col-xs-4"><img id="newImg" height="100" src="' + data[i].image + 
+                                       '" /></div></div></div><br>';
             }
         }
 
-        // Calling that async function
-        //getapi(api_url);
-
         function myFunction1(data) {
-  
-            var userText = document.getElementById("inputText").value;
 
-            api_url = "https://futuramaapi.herokuapp.com/api/quotes?search=" + userText;
+            let el = document.getElementById("container");
+            el.innerHTML = "";
+
+            var userText = document.getElementById("inputText").value;
+            console.log(userText);
+
+            var api_url = "https://futuramaapi.herokuapp.com/api/quotes?search=" + userText;
+            //var api_url = "https://futuramaapi.herokuapp.com/api/characters/" + userText;
+            //var api_url = "https://futuramaapi.herokuapp.com/api/v2/characters/" + userText;
+            //var api_url = "https://futuramaapi.herokuapp.com/api/v2/characters?search=" + userText;
 
             getapi(api_url);
         }
