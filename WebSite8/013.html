@@ -66,8 +66,7 @@
                 <img src="images13/page1.png" />
             </div>
             <div class="col-md-6">
-                <h3>Interface: Shopping Repository</h3>
-                <!--<img src="images13/IShoppingRepo.png" />-->
+                <h3>REST API, .NET Core 3, EF Core</h3>
                 <p>This material is public and published on <a href="https://www.youtube.com/watch?v=fmvcAzHpsk8" target="_blank">YouTube</a> by "Les Jackson".</p>
                 <p>It is a 3.5 hour tutorial titled ".NET Core 3.1 MVC REST API - Full Course".</p>
                 <p>The text below is a brief description of the content.</p>
@@ -188,7 +187,7 @@
                 <img src="images13/InstallPackages.png" />
             </div>
             <div class="col-md-6">
-                <h3>PostMan: Test API, Get Item By Id</h3>
+                <!--<h3>PostMan: Test API, Get Item By Id</h3>-->
                 <!--<img src="images13/api02.png" />-->
             </div>
         </div><br><hr>
@@ -264,7 +263,7 @@
         </div><br><hr>
     </div>
 
-    
+
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -285,8 +284,10 @@
                 <img src="images13/updateStartUp.png" />
             </div>
             <div class="col-md-6">
-                <h3>ShoppingList Repo: Get Item By Id</h3>
+                <h3>Startup.cs</h3>
                 <!--<img src="images13/dbRepo03.png" />-->
+                <p>The Mock repository is replaced with "ShoppingRepo".</p>
+                <p>This means the API will now retrieve information from the database.</p>
             </div>
         </div><br><hr>
     </div>
@@ -324,8 +325,10 @@
                 <img src="images13/dto01.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
-                <!--<img src="images13/postman03.png" />-->
+                <h3>Data Transfer Objects</h3>
+                <p>One reason that DTO's are used is to keep some of the properties of the internal model private.</p>
+                <p>This is useful if the model contains sensitive information (DOB, financial info, passwords, etc).</p>
+                <p>In my app, I do not include the "ShopName" property in the DTOs, so this information does not get sent to the client.</p>
             </div>
         </div><br><hr>
     </div>
@@ -363,7 +366,7 @@
                 <img src="images13/updateController01.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <!--<h3>aaaa</h3>-->
                 <!--<img src="images13/updateController02.png" />-->
             </div>
         </div><br><hr>
@@ -402,7 +405,7 @@
                 <img src="images13/dtoTest03.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <!--<h3>aaaa</h3>-->
                 <!--<img src="images13/dtoTest02.png" />-->
             </div>
         </div><br><hr>
@@ -411,11 +414,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Test DTO: "Get All Items"</h3>
+                <h3>Interface: Added Two Properties</h3>
                 <img src="images13/updateRepo.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Implement New Properties</h3>
                 <img src="images13/UpdateShoppingRepo.png" />
             </div>
         </div><br><hr>
@@ -424,11 +427,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Test DTO: "Get All Items"</h3>
+                <h3>Shopping List Create DTO</h3>
                 <img src="images13/createDTO.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Add Map to Profile</h3>
                 <img src="images13/updateProfile.png" />
             </div>
         </div><br><hr>
@@ -437,11 +440,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Test DTO: "Get All Items"</h3>
+                <h3>Controller: Add "Name" to [HttpGet]</h3>
                 <img src="images13/controller4424.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Controller: Add CreateItem()</h3>
                 <img src="images13/postMethod01.png" />
             </div>
         </div><br><hr>
@@ -450,11 +453,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Test DTO: "Get All Items"</h3>
+                <h3>Test POST Method: Create New Item</h3>
                 <img src="images13/create01.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <h3>Header: Location Generated (REST)</h3>
                 <img src="images13/create02.png" />
             </div>
         </div><br><hr>
@@ -463,11 +466,121 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Test DTO: "Get All Items"</h3>
+                <h3>Check Database</h3>
                 <img src="images13/create03.png" />
             </div>
             <div class="col-md-6">
-                <h3>aaaa</h3>
+                <!--<h3>aaaa</h3>-->
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Add Property to Interface</h3>
+                <img src="images13/putRepo1.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Implement New Property</h3>
+                <img src="images13/putRepo2.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Controller: UpdateItem()</h3>
+                <img src="images13/putController.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>UpdateItem()</h3>
+                <p>The id is used to get the shopping list object from the database.</p>
+                <p>If the id doesn't correspond to an item in the database then a NotFound message is returned.</p>
+                <p>Otherwise, the data from the new object (DTO) is copied to the object pulled from the database.</p>
+                <p>The repository method "UpdateShoppingList" is called but this does nothing. It is there for consistency.</p>
+                <p>The repository method "SaveChanges" is called.</p>
+                <p>A "No Conetent" status code is returned.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Replace Item with Id = 8</h3>
+                <img src="images13/put01.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>204, No Content Returned</h3>
+                <img src="images13/put02.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Check Database</h3>
+                <img src="images13/put04.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Check Database</h3>
+                <p>Item 8 (Twining Tea) has been updated.</p>
+                <p>The product name, quantity and price have been changed.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Repository Interface: Delete</h3>
+                <img src="images13/delete01.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Repository: Delete</h3>
+                <img src="images13/delete02.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Controller: Delete</h3>
+                <img src="images13/delete03.png" />
+            </div>
+            <div class="col-md-6">
+                <!--<h3>Repository: Delete</h3>-->
+                <!--<img src="images13/delete02.png" />-->
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Get Full List</h3>
+                <img src="images13/delete04.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Delete Item with Id = 4 (Special K)</h3>
+                <img src="images13/delete05.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Get Item with Id = 4 (404)</h3>
+                <img src="images13/delete06.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Check Database (Special K Deleted)</h3>
+                <img src="images13/delete07.png" />
             </div>
         </div><br><hr>
     </div>
