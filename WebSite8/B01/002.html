@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <ul><li>My Site</li></ul>
+    <ul><li id="changeTheme" onclick="lightDark()">DARK MODE</li></ul>
+
     <div class="jumbotron text-center">
         <img height="80" width="80" src="I001.jpg" />
         <h4 align="center">TheBalancedWriter521</h4>
@@ -72,22 +73,22 @@
                     <b>NOTE!</b> – I coded this simple site from scratch to replicate a WordPress <a href="https://thebalancedwriter521.wordpress.com/diary/" rel="noopener">BLOG</a> that I created, <i>WITHOUT THE ADVERTS</i>. The WP site is free and this means that there are adverts to cover the cost of hosting/etc. It was a fun way to practice some front-end.
                 <p>
 
-                <hr><br>
+                    <hr><br>
 
 
                 <p>
-                    <span style="color:#333333;"><strong>30/07/2021: Subversive Genius!</strong></span><br />
-                    <span style="color:#333333;">Throughout the month I&#8217;ve been messing around with Ajax, REST APIs and <a href="../001.html" target="_blank">.NET Core</a>. On the 8th, the evening was humid and 17 degrees so I went for a drive and grooved to my jazz CD (singing along with Countdown). It was very relaxing. I re-watched some Buffy (S3). On the 11th, I watched England lose to Italy and didn&#8217;t care. The youthful England squad did not perform well under pressure (penalties) and the Italians played in a boring style and did a lot shirt-pulling and shoulder-barging. On the 16th I had my second jab, 48 hours of feeling woozy. Then for one week it was too hot to do anything. After watching a few &#8220;Ren and Stimpy&#8221; clips and a &#8220;John K&#8221; interview, I discovered &#8220;Ralph Bakshi&#8221; and then watched &#8220;<a href="https://www.youtube.com/watch?v=aM9sQoXlcdw" target="_blank" rel="noopener">Coonskin</a>&#8220;. Ren and Stimpy captures the best parts of 50&#8217;s American Pop Culture (dislike of hippies, good jazz, adverts, Hollywood, etc). I can see Bakshi influence on John K. </span>
+                    <!--<span style="color:#333333;">--><strong>30/07/2021: Subversive Genius!</strong><!--</span>--><br />
+                    <!--<!--<span style="color:#333333;">-->Throughout the month I&#8217;ve been messing around with Ajax, REST APIs and <a href="../001.html" target="_blank">.NET Core</a>. On the 8th, the evening was humid and 17 degrees so I went for a drive and grooved to my jazz CD (singing along with Countdown). It was very relaxing. I re-watched some Buffy (S3). On the 11th, I watched England lose to Italy and didn&#8217;t care. The youthful England squad did not perform well under pressure (penalties) and the Italians played in a boring style and did a lot shirt-pulling and shoulder-barging. On the 16th I had my second jab, 48 hours of feeling woozy. Then for one week it was too hot to do anything. After watching a few &#8220;Ren and Stimpy&#8221; clips and a &#8220;John K&#8221; interview, I discovered &#8220;Ralph Bakshi&#8221; and then watched &#8220;<a href="https://www.youtube.com/watch?v=aM9sQoXlcdw" target="_blank" rel="noopener">Coonskin</a>&#8220;. Ren and Stimpy captures the best parts of 50&#8217;s American Pop Culture (dislike of hippies, good jazz, adverts, Hollywood, etc). I can see Bakshi influence on John K. <!--</span>-->-->
                 </p>
-                
+
                 <img id="img2" src="https://thebalancedwriter521.files.wordpress.com/2021/07/coonskin01.png" />
                 <br>
                 <br>
                 <hr>
 
                 <p>
-                    <span style="color:#333333;"><strong>02/07/2021: Problem Solving</strong></span><br />
-                    <span style="color:#333333;">Over the past week I&#8217;ve been trying to figure out how Ajax calls work with MVC (.NET) and finally I got my <a href="../011.html" target="_blank" rel="noopener">web app</a> behaving the way that I want. It involved &#8220;code first migrations&#8221;, &#8220;Ajax calls&#8221;, etc. Before deploying the web app to a server, the database initialization code has to be disabled. I also learned that you can use database back-up files (.bak) to restore the server-side database if something goes wrong. Also I had to deal with the problem of where to put the script files because when a partial page is reloaded via a jQuery/Ajax call, the scripts stop working and have to be reloaded as well. I also solved the problem below. The server-side code that I wrote was a little different to the incoming request which caused the error. When I made a slight change (more out of instinct rather than deep thought) it fixed the problem. I&#8217;ve made some progress and it all functions well so now I just need to tidy and organise the code. The next thing that I should probably work on is web API&#8217;s.</span>
+                    <!--<span style="color:#333333;">--><strong>02/07/2021: Problem Solving</strong><!--</span>--><br />
+                    <!--<span style="color:#333333;">-->Over the past week I&#8217;ve been trying to figure out how Ajax calls work with MVC (.NET) and finally I got my <a href="../011.html" target="_blank" rel="noopener">web app</a> behaving the way that I want. It involved &#8220;code first migrations&#8221;, &#8220;Ajax calls&#8221;, etc. Before deploying the web app to a server, the database initialization code has to be disabled. I also learned that you can use database back-up files (.bak) to restore the server-side database if something goes wrong. Also I had to deal with the problem of where to put the script files because when a partial page is reloaded via a jQuery/Ajax call, the scripts stop working and have to be reloaded as well. I also solved the problem below. The server-side code that I wrote was a little different to the incoming request which caused the error. When I made a slight change (more out of instinct rather than deep thought) it fixed the problem. I&#8217;ve made some progress and it all functions well so now I just need to tidy and organise the code. The next thing that I should probably work on is web API&#8217;s.<!--</span>-->
                 </p>
 
 
@@ -96,10 +97,9 @@
                 <br>
                 <hr>
 
-
                 <p>
-                    <span style="color:#333333;"><strong>30/05/2021: Cat Doodles</strong></span><br />
-                    <span style="color:#333333;">My sister did some doodles of cats recently and I like them. For the first three weeks of May, the weather was cold and rainy however for the past few days, it has improved. I got my first dose of vaccine last week, recorded some of my <a href="https://www.youtube.com/watch?v=X85OL2j5Uy4" target="_blank" rel="noopener">singing</a> and I&#8217;ve recently finished all seasons of &#8220;Mad Men&#8221;, I enjoyed it. New York in the late 50&#8217;s slash 60&#8217;s. The glamour. References to beatniks. I also discovered this tune &#8220;<a href="https://www.youtube.com/watch?v=MtVjPqdoMD4" target="_blank" rel="noopener">Punching Bag</a>&#8221; by Downer. I added it to my &#8220;Nu-Metal&#8221; playlist, made a CD and went for a drive. My tyre pressure sensor has been on for a while so I checked them. The tyres were fine apart from the rear left which was about 18 psi. </span>
+                    <!--<span style="color:#333333;">--><strong>30/05/2021: Cat Doodles</strong><!--</span>--><br />
+                    <!--<span style="color:#333333;">-->My sister did some doodles of cats recently and I like them. For the first three weeks of May, the weather was cold and rainy however for the past few days, it has improved. I got my first dose of vaccine last week, recorded some of my <a href="https://www.youtube.com/watch?v=X85OL2j5Uy4" target="_blank" rel="noopener">singing</a> and I&#8217;ve recently finished all seasons of &#8220;Mad Men&#8221;, I enjoyed it. New York in the late 50&#8217;s slash 60&#8217;s. The glamour. References to beatniks. I also discovered this tune &#8220;<a href="https://www.youtube.com/watch?v=MtVjPqdoMD4" target="_blank" rel="noopener">Punching Bag</a>&#8221; by Downer. I added it to my &#8220;Nu-Metal&#8221; playlist, made a CD and went for a drive. My tyre pressure sensor has been on for a while so I checked them. The tyres were fine apart from the rear left which was about 18 psi. <!--</span>-->
                 </p>
 
                 <img id="img1" src="https://thebalancedwriter521.files.wordpress.com/2021/05/cats001.png" />
@@ -107,19 +107,31 @@
                 <br>
                 <hr>
 
-                <p><span style="color:#333333;"><strong>19/03/2021: HJ Proof Copy</strong></span><br /><span style="color:#333333;">The proof copy arrived a few days ago. I updated the font size to 12 and checked the page numbers. HJ seems good enough to do the final <a href="B017.html">edit</a> now. I’ll try to read and analyse it as five, 40-page chunks. Once I complete reading and notating one of these chunks, I will revamp the synopsis and cover letter. In other news, I&#8217;ve been watching some old-school anime on YT (Wicked City). It&#8217;s been almost a year since the first &#8220;lockdown&#8221;.</span></p>
+                <p>
+                    <!--<span style="color:#333333;">--><strong>19/03/2021: HJ Proof Copy</strong><!--</span>--><br />
+                    <!--<span style="color:#333333;">-->The proof copy arrived a few days ago. I updated the font size to 12 and checked the page numbers. HJ seems good enough to do the final <a href="B017.html">edit</a> now. I’ll try to read and analyse it as five, 40-page chunks. Once I complete reading and notating one of these chunks, I will revamp the synopsis and cover letter. In other news, I&#8217;ve been watching some old-school anime on YT (Wicked City). It&#8217;s been almost a year since the first &#8220;lockdown&#8221;.<!--</span>-->
+                </p>
+
                 <img id="img1" src="https://thebalancedwriter521.files.wordpress.com/2021/03/book1.png" />
                 <br>
                 <br>
                 <hr>
 
-                <p><span style="color:#333333;"><strong>09/03/2021: Permanence</strong></span><br /><span style="color:#333333;">I&#8217;ve been working on <a href="../009.html">EF migrations</a> (Code First Work Flow), watching another Alicia Witt movie (Mistletoe Inn) and formatting/editing (KDP) one of my <a href="B017.html">novels</a>. Today, the weather was good. It was sunny and the sky was clear. The cold air and hot sunlight actually balanced each other out. I updated my NuMetal <a href="https://open.spotify.com/playlist/2OlyitojlEKUudls9NNZ8E" target="_blank" rel="noopener">playlist</a>, made a CD and drove to the shops. Static X &#8211; <a href="https://www.youtube.com/watch?v=08S5CwJA12E" target="_blank" rel="noopener">Permanence</a>. That song is really good. </span></p>
+                <p>
+                    <!--<span style="color:#333333;">--><strong>09/03/2021: Permanence</strong><!--</span>--><br />
+                    <!--<span style="color:#333333;">-->I&#8217;ve been working on <a href="../009.html">EF migrations</a> (Code First Work Flow), watching another Alicia Witt movie (Mistletoe Inn) and formatting/editing (KDP) one of my <a href="B017.html">novels</a>. Today, the weather was good. It was sunny and the sky was clear. The cold air and hot sunlight actually balanced each other out. I updated my NuMetal <a href="https://open.spotify.com/playlist/2OlyitojlEKUudls9NNZ8E" target="_blank" rel="noopener">playlist</a>, made a CD and drove to the shops. Static X &#8211; <a href="https://www.youtube.com/watch?v=08S5CwJA12E" target="_blank" rel="noopener">Permanence</a>. That song is really good. <!--</span>-->
+                </p>
+
                 <img id="img1" src="https://thebalancedwriter521.files.wordpress.com/2021/03/staticx-01.png" />
                 <br>
                 <br>
                 <hr>
 
-                <p><span style="color:#333333;"><strong>24/02/2021: SELL ME THIS PEN!</strong></span><br /><span style="color:#333333;">A week ago I started looking into self-publishing <a href="B017.html">novel 1</a>, as a paperback, on Amazon KDP. Right now I&#8217;m formatting the manuscript. I plan to print, one test copy, for proof-reading. Once I&#8217;m happy, I&#8217;ll publish it! It would be fun to try and sell a few copies to people who appreciate &#8220;accessible-literary&#8221; fiction. I&#8217;ll make a little YT channel for it. Nothing crazy, just small and informative. When it comes to marketing I like the <a href="https://www.youtube.com/watch?v=h5cZybM2iP4" target="_blank" rel="noopener">targeted</a> and subtle approach. In other news the weather seems to be improving (double digits), almost 18m people have received 1st dose of vaccine and I discovered some good old TV content (early 00&#8217;s) by a director/writer called Annie Griffin. <a href="https://www.channel4.com/programmes/the-book-group" target="_blank" rel="noopener">The Book Group</a> is excellent. I also discovered an old anime (1996) called &#8220;<a href="https://www.channel4.com/programmes/the-vision-of-escaflowne/" target="_blank" rel="noopener">Escaflowne</a>&#8221; and watched the first episode (dub). It was really good, I enjoyed every second. Wonderful art, charming characters and interesting story. I love &#8220;Channel 4 Online&#8221; (All 4).</span></p>
+                <p>
+                    <!--<span style="color:#333333;">--><strong>24/02/2021: SELL ME THIS PEN!</strong><!--</span>--><br />
+                    <!--<span style="color:#333333;">-->A week ago I started looking into self-publishing <a href="B017.html">novel 1</a>, as a paperback, on Amazon KDP. Right now I&#8217;m formatting the manuscript. I plan to print, one test copy, for proof-reading. Once I&#8217;m happy, I&#8217;ll publish it! It would be fun to try and sell a few copies to people who appreciate &#8220;accessible-literary&#8221; fiction. I&#8217;ll make a little YT channel for it. Nothing crazy, just small and informative. When it comes to marketing I like the <a href="https://www.youtube.com/watch?v=h5cZybM2iP4" target="_blank" rel="noopener">targeted</a> and subtle approach. In other news the weather seems to be improving (double digits), almost 18m people have received 1st dose of vaccine and I discovered some good old TV content (early 00&#8217;s) by a director/writer called Annie Griffin. <a href="https://www.channel4.com/programmes/the-book-group" target="_blank" rel="noopener">The Book Group</a> is excellent. I also discovered an old anime (1996) called &#8220;<a href="https://www.channel4.com/programmes/the-vision-of-escaflowne/" target="_blank" rel="noopener">Escaflowne</a>&#8221; and watched the first episode (dub). It was really good, I enjoyed every second. Wonderful art, charming characters and interesting story. I love &#8220;Channel 4 Online&#8221; (All 4).<!--</span>-->
+                </p>
+
                 <img id="img2" src="https://thebalancedwriter521.files.wordpress.com/2021/02/text1.png" />
                 <br>
                 <hr>
@@ -338,6 +350,8 @@
 
     <br>
     <br>
+
+    <script src="lightDarkTheme.js"></script>
 
 </body>
 </html>
