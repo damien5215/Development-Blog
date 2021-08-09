@@ -201,15 +201,27 @@ img.customCentered {
     border-radius: 3px;
 }
 
-a:visited, a:link {
+
+
+a.normal:visited, a.normal:link {
     text-decoration: none;
     color: #0087be !important;
-    /*color: darkgreen !important;*/
+}
+
+a.normal:hover, a.normal:focus, a.normal:active {
+    color: #00aadc !important;
+}
+
+
+a:visited, a:link {
+    text-decoration: none;
+    /*color: #0087be !important;*/
+    color: #3399ff !important;
 }
 
 a:hover, a:focus, a:active {
-    color: #00aadc !important;
-    /*color: darkgreen !important;*/
+    /*color: #00aadc !important;*/
+    color: #4da6ff !important;
 }
 
 .center {
