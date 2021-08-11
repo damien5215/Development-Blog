@@ -24,9 +24,6 @@
 
         <h2>Test 01</h2>
 
-        <p>Link 1 - <a href="https://stackoverflow.com/questions/31919869/create-multiple-divs-using-a-for-loop" target="_blank">LINK</a></p>
-        <p>Link 2 - <a href="https://stackoverflow.com/questions/3762385/best-way-to-inject-html-using-javascript/3762416" target="_blank">LINK</a></p>
-
         <div id="container">
 
         </div>
@@ -38,13 +35,11 @@
              alt="github icon" />
     </a>
     
-
-
     <script>
         var container = document.getElementById("container");
 
         for (var i = 0; i < 3; i++) {
-            container.innerHTML += '<div class="container-fluid"><div class="row"><div class="col-xs-2"><p id="newContent">hello</p></div><div class="col-xs-6"><p id="newQuote">kfdkdf</p></div><div class="col-xs-4"><img id="newImg" height="100" /></div></div></div>';
+            container.innerHTML += '<div class="container-fluid"><p>Test</p></div>';
 
         }
 
