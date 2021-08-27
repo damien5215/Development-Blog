@@ -70,7 +70,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h3>Project 2: JavaScript/jQuery</h3>
-                <img src="images8/proj02d.png" /> 
+                <img src="images8/proj02d.png" />
             </div>
             <div class="col-md-6">
                 <h3>Display Text + Image</h3>
@@ -108,6 +108,18 @@
     <br>
     <br>
     <br>
+
+    <script>
+
+        updateProjectsCounter();
+
+        function updateProjectsCounter() {
+
+            fetch('https://api.countapi.xyz/update/ssfmiwil/projectsCount/?amount=1')
+                .then(res => res.json())
+        };
+
+    </script>
 
 </body>
 </html>
