@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        #D001 {
+            width: 100%;
+            height: 100%;
+        }
+
+        #D017 {
+            width: 517px;
+            height: 246px;
+        }
+
+        h1 {
+            text-align:"center";
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 align="center">DevDiary</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3><a href="001.html">HOME</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <h3><a href="Projects.html">PROJECTS</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <!--<h3><a target="_blank" href="https://github.com/damien5215">GITHUB</a></h3>-->
+            </div>
+            <div class="col-sm-3">
+                <!--<h3><a href="Links.html">LINKS</a></h3>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <br><hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>HTML Body</h3>
+                <img src="images16/m001.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Container</h3>
+                <p>All this HTML page contains ,in the body, is a heading and an empty div element.</p>
+                <p>The empty div element also has an id of "container".</p>
+                <p>The JavaScript will update this elements innerHTML once it get the data from an API.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async Function 1</h3>
+                <img src="images16/m002a.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Get API Data</h3>
+                <p>Before the function two varibles are set up. One for the empty div (container) and a variable to act as a counter.</p>
+                <p>This function makes a GET request to an API.</p>
+                <p>The "baskets" length is the number of records that this "pantry" holds. In this case, 3.</p>
+                <p>A 2D array with the dimensions 3x4 is then created.</p>
+                <p>A for loop is used to get the id of each record and it is passed to the next function.</p>
+                <p>In this case, the loop calls the function 4 times and passes 4 parameters - </p>
+                <br>
+                <p><i>dataNo1 = the Id of the record.</i></p>
+                <p><i>arr = the empty 3x4 array.</i></p>
+                <p><i>j = the loop varible.</i></p>
+                <p><i>resLength = the number of records to get.</i></p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Async Function 2</h3>
+                <img src="images16/m003.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Get API Data and Display It</h3>
+                <p>The Id for each of the records is added to the URL of the GET request.</p>
+                <p>The counter is incremented.</p>
+                <p>The loop variable j is used to make sure the data from the API is loaded to the apropriate row, of the 2D array.</p>
+                <p>When the counter variable is equal to the total number of requested records (3), it means that the array is complete.</p>
+                <p>Using a for-loop, the innerHTML of the empty div is updated with contents of the array.</p>
+                <br>
+                <p>The screenshots below shows the data contained in the array.</p>
+                <p>It also shows the HTML which is <a href="D01/Movies.html" target="_blank">rendered</a>.</p>
+                <p>Note that the records are ordered according to their Id's (1, 2, 3).</p>
+                <p>These three asynchronus calls are made and get resolved at different times. This is shown in the console. Using the passed loop varible j ensures that the rows are entered in the correct order and the if loop makes sure the data is not presented until the array contains all of the data.</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Data Returned from API</h3>
+                <img src="images16/m008.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Rendered HTML</h3>
+                <img src="images16/m004.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>API Data Loaded to Array</h3>
+                <img src="images16/m005a.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Using Console to Display Contents of Array</h3>
+                <img src="images16/m005b.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Order of Responses are Non-Deterministic</h3>
+                <img src="images16/m006.png" />
+            </div>
+            <div class="col-md-6">
+                <h3>Order of Responses are Non-Deterministic</h3>
+                <img src="images16/m009.png" />
+            </div>
+        </div><br><hr>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+</html>
