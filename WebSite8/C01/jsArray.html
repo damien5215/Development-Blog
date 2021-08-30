@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin: 4px;
+            padding-top: 3px;
+            padding-right: 3px;
+            padding-bottom: 5px;
+            padding-left: 12px;
+        }
+
+        h2 {
+            padding-left: 14px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Arrays</h2>
+
+
+
+
+
+    <script>
+
+        var newArray = new Array(2);
+
+        for (var i = 0; i < newArray.length; i++) {
+            newArray[i] = new Array(3);
+        }
+
+        newArray[0][0] = 1;
+        newArray[0][1] = 2;
+        newArray[0][2] = 3;
+
+        newArray[1][0] = 4;
+        newArray[1][1] = 5;
+        newArray[1][2] = 6;
+
+        console.log(newArray[0][0]);
+        console.log(newArray[0][1]);
+        console.log(newArray[0][2]);
+
+        console.log(newArray[1][0]);
+        console.log(newArray[1][1]);
+        console.log(newArray[1][2]);
+
+        console.log("\n" + newArray.length);
+        console.log(newArray[0].length);
+
+        console.log("\n" + (newArray.length * newArray[0].length));
+
+        // var result = newArray.reduce((count, row) => count + row.length, 0);
+        // console.log(result);
+
+    </script>
+
+</body>
+</html>

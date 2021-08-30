@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin: 4px;
+            padding-top: 3px;
+            padding-right: 3px;
+            padding-bottom: 5px;
+            padding-left: 12px;
+        }
+
+        h2 {
+            padding-left: 14px;
+        }
+
+        p{
+            font-size:15px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Get Data</h2>
+    <br>
+
+
+    <div id="container">
+
+
+    </div>
+
+    <script>
+
+        var container = document.getElementById("container");
+        var asyncCounter = 0;
+
+        async function getAPIData() {
+
+            const response = await fetch('https://getpantry.cloud/apiv1/pantry/630f829e-1c3f-4661-8933-087650a21caa/');
+            var data = await response.json();
+
+            var resLength = data.baskets.length;               
+            var arr = new Array(resLength);                      
+
+            for (var i = 0; i < arr.length; i++) {               
+                arr[i] = new Array(3);
+            }
+
+            for (var j = 0; j < data.baskets.length; j++) {
+                var dataNo1 = data.baskets[j];
+                getAPIDataDisplay(dataNo1, arr, j, resLength); 
+            }
+        }
+        getAPIData();
+
+
+        async function getAPIDataDisplay(dataNo1, arr, j, resLength) {
+
+            const response = await fetch('https://getpantry.cloud/apiv1/pantry/630f829e-1c3f-4661-8933-087650a21caa/basket/' + dataNo1);
+            var data = await response.json();
+            asyncCounter++;
+
+            arr[j][0] = data.id;
+            arr[j][1] = data.address;
+            arr[j][2] = data.name;
+
+            console.log("array = " + arr[j][0]);
+            console.log("array = " + arr[j][1]);
+            console.log("array = " + arr[j][2]);
+            console.log("\n");
+
+            if (asyncCounter == resLength)
+            {
+                console.log("Array is full!");
+
+                for (var i = 0; i < resLength; i++)
+                {
+                    container.innerHTML += '<div class="container-fluid"><div class="row"><div class="col-xs-4"><p id="newContent">' + arr[i][1] +
+                        '</p></div><div class="col-xs-4"><p id="newQuote">' + arr[i][0] +
+                        '</p></div><div class="col-xs-4"><p id="newQuote">' + arr[i][2] +
+                        '</p></div></div></div><br>';
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>
