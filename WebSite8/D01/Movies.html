@@ -32,7 +32,7 @@
     <br>
 
     <div id="container">
-
+        <p>LOADING DATA, PLEASE WAIT</p>
     </div>
 
     <script>
@@ -71,15 +71,16 @@
             arr[j][2] = data.movie;
             arr[j][3] = data.name;
 
-            console.log("array = " + arr[j][0]);
-            console.log("array = " + arr[j][1]);
-            console.log("array = " + arr[j][2]);
-            console.log("array = " + arr[j][3]);
+            console.log("array id    = " + arr[j][0]);
+            console.log("array date  = " + arr[j][1]);
+            console.log("array movie = " + arr[j][2]);
+            console.log("array name  = " + arr[j][3]);
             console.log("\n");
 
             if (asyncCounter == resLength)
             {
                 console.log("Array is full!");
+                container.innerHTML = '';
 
                 for (var i = 0; i < resLength; i++)
                 {
