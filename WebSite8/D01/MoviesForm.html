@@ -112,6 +112,7 @@
             console.log("\n");
 
             if (asyncCounter == resLength) {
+
                 console.log("Array is full!");
                 container.innerHTML = '';
 
@@ -163,7 +164,7 @@
             fetch("https://getpantry.cloud/apiv1/pantry/5638cc37-8155-4163-ad08-7e4c6de5ee57/basket/" + movieId, requestOptions)
                 .then(response => response.text())
                 .then(result => console.log(result))
-                //.then(getAPIData())
+                .then(setTimeout(getAPIData, 600))
                 .catch(error => console.log('error', error));
         };
 
@@ -191,7 +192,7 @@
             fetch("https://getpantry.cloud/apiv1/pantry/5638cc37-8155-4163-ad08-7e4c6de5ee57/basket/" + movieId, requestOptions)
                 .then(response => response.text())
                 .then(result => console.log(result))
-                //.then(getAPIData())
+                .then(setTimeout(getAPIData, 600))
                 .catch(error => console.log('error', error));
         };
     </script>
