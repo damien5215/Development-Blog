@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            margin: 4px;
+            padding-top: 3px;
+            padding-right: 3px;
+            padding-bottom: 5px;
+            padding-left: 12px;
+        }
+
+        h2 {
+            padding-left: 14px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Arrays</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="id" id="input1">sonic1</p>
+            </div>
+            <div class="col-md-6">
+                <p class="id" id="input2">tails2</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="id" id="input3">knuckles3</p>
+            </div>
+            <div class="col-md-6">
+                <p class="id" id="input4">1234</p>
+            </div>
+        </div><br><hr>
+    </div>
+
+    <div>
+        <h2 id="test">ff</h2>
+    </div>
+
+
+    <script>
+
+        const btnSelect = document.getElementsByClassName('id');
+        var result = document.getElementById('test');
+
+        for (var i = 0; i < btnSelect.length; i++) {
+            btnSelect[i].addEventListener("click", function (e) {
+                //console.log(e);
+                //console.log(e.target);
+                console.log(e.srcElement.innerHTML);
+
+                result.innerHTML = e.srcElement.innerHTML;
+            });
+        }
+
+    </script>
+
+</body>
+</html>
