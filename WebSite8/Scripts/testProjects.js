@@ -43,6 +43,5 @@ async function saveToAPI(dateString, address) {
     fetch("https://getpantry.cloud/apiv1/pantry/630f829e-1c3f-4661-8933-087650a21caa/basket/" + address, requestOptions)
         .then(response => response.text())
         //.then(result => console.log(result))
-        .then(getAPIData())                              
         .catch(error => console.log('error', error));
 };
