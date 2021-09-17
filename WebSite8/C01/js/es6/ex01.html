@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="ES6_Style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>ES6 Examples</h2>
+
+    <p id="ex01">let, no block scope = </p>
+    <p id="ex02">let, block scope = </p>
+
+    <p id="ex03">var, no block scope = </p>
+    <p id="ex04">const, block scope = </p>
+
+    <p id="ex05">Arrow function, myFunction(5, 5) = </p>
+
+
+    <script>
+
+        // The let keyword allows you to declare a variable with block scope.
+        let x = 10;
+        {
+            let x = 4;
+            document.getElementById("ex02").innerHTML += x;
+        }
+        document.getElementById("ex01").innerHTML += x;
+
+
+        // The const keyword allows you to declare a constant.
+        var y = 14;
+        {
+            const y = 5;
+            document.getElementById("ex04").innerHTML += y;
+        }
+        y++;
+        document.getElementById("ex03").innerHTML += y;
+
+
+        // This is an ES6 arrow function.
+        const myFunction = (x1, y1) => x1 * y1;
+
+        //var myFunction = function (x1, y1) {
+        //    return x1 * y1;
+        //}
+        document.getElementById("ex05").innerHTML += myFunction(5, 5);
+
+
+    </script>
+
+</body>
+</html>
