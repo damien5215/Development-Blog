@@ -1,0 +1,15 @@
+﻿body {
+    margin: 4px;
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 5px;
+    /*padding-left: 12px;*/
+}
+
+h2 {
+    padding-left: 14px;
+}
+
+p {
+    font-size: 15px;
+}
