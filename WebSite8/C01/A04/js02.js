@@ -1,5 +1,4 @@
-﻿// const dataURL = "http://www.text.damienasp.com/A01/HR01JSON.json";           
-const dataURL = "http://localhost:59024/C01/A04/HR02JSON.json";          
+﻿const dataURL = "http://www.text.damienasp.com/C01/A04/HR02JSON.json";
 var dataArray = [];
 const btnSelect = document.getElementsByTagName("input");
 
@@ -39,7 +38,6 @@ for (let i = 0; i < btnSelect.length; i += 1) {
             document.querySelector('#img1').src = IMG;                         
             document.querySelector('#text1').value = TEXT;                    
         });
-
-        $("#img1").fadeIn(700)
+        $("#img1").fadeIn(700);
     })
 }
