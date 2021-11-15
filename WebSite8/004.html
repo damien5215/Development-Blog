@@ -362,7 +362,7 @@
         </div><br><hr>
     </div>
 
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h3>Create Stored Procedure 1</h3>
@@ -373,7 +373,7 @@
                 <img src="images3/sp001b.png" id="D011" />
             </div>
         </div><br><hr>
-    </div>
+    </div>-->
 
     <div class="container">
         <div class="row">
@@ -437,7 +437,6 @@
             </div>
             <div class="col-md-6">
                 <h3>Default set to NULL</h3>
-                <!--<img src="images3/sp006.png" id="D011" />-->
                 <p>ddsds</p>
                 <p>ddsds</p>
                 <p>ddsds</p>
@@ -448,45 +447,29 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Add Parameters</h3>
+                <!--<h3>Add Parameters</h3>-->
+                <h3>Update WHERE Statement</h3>
                 <img src="images3/sp014c.png" id="D011" />
             </div>
             <div class="col-md-6">
                 <h3>Update WHERE Statement</h3>
-                <!--<img src="images3/sp006.png" id="D011" />-->
-                <p>ddsds</p>
-                <p>ddsds</p>
-                <p>ddsds</p>
-                <p>ddsds</p>
+                <p>For the MinLimit and MaxLimit parameters, if they are not null there are conditions.</p>
+                <p>[Price] > MinLimit</p>
+                <p>[Price] < MaxLimit</p>
+                <p>Also the list of books returned if they contain the @SearchWord </p>
             </div>
         </div><br><hr>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Call SP</h3>
-                <img src="images3/sp015.png" id="D011" />
-            </div>
-            <div class="col-md-6">
-                <h3>Update WHERE Statement</h3>
-                <!--<img src="images3/sp006.png" id="D011" />-->
-                <p>ddsds</p>
-                <p>ddsds</p>
-                <p>ddsds</p>
-                <p>ddsds</p>
-            </div>
-        </div><br><hr>
-    </div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Call SP</h3>
+                <h3>Call SP: All Books Returned</h3>
                 <img src="images3/sp16a.png" id="D011" />
             </div>
             <div class="col-md-6">
-                <h3>Update WHERE Statement</h3>
+                <h3>Call SP: All Books Returned That Contain 'the'</h3>
                 <img src="images3/sp16b.png" id="D011" />
             </div>
         </div><br><hr>
@@ -499,11 +482,13 @@
                 <img src="images3/sp017.png" id="D011" />
             </div>
             <div class="col-md-6">
-                <h3>Update WHERE Statement</h3>
-                <!--<img src="images3/sp16b.png" id="D011" />-->
-                <p>fdf</p>
-                <p>fdf</p>
-                <p>fdf</p>
+                <h3>Pass in Three Parameters</h3>
+                <p>Three parameters are set -</p>
+                <p>MinPrice (£6)</p>
+                <p>MaxPrice (£15)</p>
+                <p>SearchWord ('the')</p>
+                <p>This return all the books that are between the prices £6 and £15 and all titles which contain the word 'the'.</p>
+                <p>In this case only two books are returned.</p>
             </div>
         </div><br><hr>
     </div>
