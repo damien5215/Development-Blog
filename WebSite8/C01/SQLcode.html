@@ -17,34 +17,19 @@
             padding-left: 25px;
             }
 
-        /*p {
-            display: inline;
-        }*/
-
-        /*div {
-            display: inline;
-        }*/
-        
     </style>
-
 </head>
 
 <body>
-    
     <br>
-    <!--<br>-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-2">
-                <h3></h3>
-            </div>
-            <div class="col-sm-8">
-                <p><b>Code Snippets</b></p>
-                <p><span style="color:blue">select</span> count(*) <span style="color:blue">from</span> table1</p>
+            <div class="col-sm-6">
+                <p><b>SQLCode Snippets</b></p>
                 <p><span style="color:blue">select top</span> 30 * <span style="color:blue">from</span> table1</p>
 
                 <p>
-                    <span style="color:blue">select</span> * <span style="color:blue">from</span> table1<br>
+                    <span style="color:blue">select</span> count(*) <span style="color:blue">from</span> table1<br>
                     <span style="color:blue">where</span> ColName <span style="color:grey">like</span> <span style="color:red">'foo%'</span>
                 </p>
 
@@ -54,10 +39,15 @@
                     <span style="color:blue">on</span> BookTable.AuthorId = AuthorTable.AuthorId
                 </p>
 
-
+                <p>
+                    <span style="color:blue">begin tran</span><br>
+                    <span style="color:hotpink">update</span> Table1<br>
+                    <span style="color:blue">set</span> blah1 = "foo", blah2 = 273<br>
+                    <span style="color:blue">where</span> blah3 = 521
+                </p>
 
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-6">
                 <h3></h3>
             </div>
         </div><br>
@@ -65,8 +55,6 @@
 
     <br>
     <br>
-
-
 
 </body>
 </html>
