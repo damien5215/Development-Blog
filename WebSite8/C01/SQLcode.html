@@ -22,14 +22,17 @@
 
 <body>
     <br>
-    <div class="container">
+    <!--<p style="padding-left:78px"><b>SQLCode Snippets</b></p>-->
+
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <p><b>SQLCode Snippets</b></p>
+                <!--<p><b>SQLCode Snippets</b></p>-->
                 <p><span style="color:blue">select top</span> 30 * <span style="color:blue">from</span> table1</p>
 
                 <p>
-                    <span style="color:blue">select</span> count(*) <span style="color:blue">from</span> table1<br>
+                    <span style="color:blue">select</span> count(*)
+                    <span style="color:blue">from</span> table1<br>
                     <span style="color:blue">where</span> ColName <span style="color:grey">like</span> <span style="color:red">'foo%'</span>
                 </p>
 
@@ -46,9 +49,37 @@
                     <span style="color:blue">where</span> blah3 = 521
                 </p>
 
+                <p>
+                    <span style="color:blue">select</span> *
+                    <span style="color:blue">from</span> table1<br>
+                    <span style="color:blue">where</span> column
+                    <span style="color:grey">in</span> (<br>
+                    <span style="color:red">'001'</span>
+                    <span style="color:grey">,</span><br>
+                    <span style="color:red">'002'</span>
+                    <span style="color:grey">,</span><br>
+                    <span style="color:red">'003'</span>)<br>
+                </p>
+
             </div>
             <div class="col-sm-6">
                 <h3></h3>
+                <p>
+                    <span style="color:blue">select</span> count(*)
+                    <span style="color:blue">from</span> table1<br>
+                    <span style="color:blue">where</span> ColName1 = 34<br>
+                    <span style="color:blue">order by</span>  ColName2
+                    <span style="color:blue"> asc</span>
+                </p>
+                <!--<p>
+                    <span style="color:blue">select</span> *
+                    <span style="color:blue">from</span> table1<br>
+                    <span style="color:blue">where</span> column
+                    <span style="color:grey">in</span> (<br>
+                    <span style="color:red">'001'</span>
+                    <span style="color:grey">,</span><br>
+                    <span style="color:red">'002'</span>)<br>
+                </p>-->
             </div>
         </div><br>
     </div>
