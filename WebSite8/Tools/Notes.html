@@ -50,34 +50,22 @@
 </head>
 <body>
 
-    <!--<h2>Get Data</h2>
-    <br>
-
-
-    <div id="container">
-
-
-    </div>-->
-
-
-
-    <br>
+    <!--<br>-->
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-sm-1">
+            <!--<div class="col-sm-1">
                 <h3></h3>
-            </div>
-            <div class="col-sm-10">
-                <p><b>Vertical List to Hoizontal List</b></p>
-                <p>The title is self explanatory. <button onclick="getFormData()" type="button">Click Me!</button></p>
+            </div>-->
+            <div class="col-sm-12">
+                <p><button onclick="getFormData()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b></p>
 
-                <textarea id="text1" rows="18" cols="60">Type Here.</textarea>
-                <textarea id="text2" rows="18" cols="60" readonly="readonly"></textarea>
+                <textarea id="text1" rows="25" cols="77">Type Here.</textarea>
+                <textarea id="text2" rows="25" cols="77" readonly="readonly"></textarea>
             </div>
-            <div class="col-sm-1">
+            <!--<div class="col-sm-1">
                 <h3></h3>
-            </div>
+            </div>-->
         </div><br>
     </div>
     <br>
@@ -88,18 +76,18 @@
 
     <script>
 
-        // Create a EDIT button and function.
-        // Takes text in textbox 1 and posts it.
-        // After 500ms, Textbox 2 calls testFunction().
+        const button = document.querySelector('#button01');
 
         function getFormData() {
             var inputText = document.querySelector('#text1').value;
-            console.log(inputText);
+            //console.log(inputText);
             saveToAPI(inputText);
         }
 
         async function saveToAPI(inputText) {
 
+            button.disabled = true;
+            button.style.color = "red";
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
 
@@ -126,21 +114,6 @@
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         async function getPantryData() {
 
             //Creates 1D Array
@@ -163,16 +136,18 @@
             arr[0][1] = data.address;
             arr[0][2] = data.name;
 
-            console.log("array = " + arr[0][0]);
-            console.log("array = " + arr[0][1]);
-            console.log("array = " + arr[0][2]);
-            console.log("\n");
+            //console.log("array = " + arr[0][0]);
+            //console.log("array = " + arr[0][1]);
+            //console.log("array = " + arr[0][2]);
+            //console.log("\n");
 
             document.getElementById("text2").innerHTML = arr[0][0];  //read only
-            document.getElementById("text1").innerHTML = arr[0][0];  //read only
+            document.getElementById("text1").innerHTML = arr[0][0];  //input
             console.log(arr);
-            console.log(arr[0][0]);
             console.log("it works!");
+            console.log("\n");
+            button.disabled = false;
+            button.style.color = "black";
         }
         getPantryData();
 
