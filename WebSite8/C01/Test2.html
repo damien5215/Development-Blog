@@ -41,6 +41,7 @@
 
         var container = document.getElementById("container");
         var asyncCounter = 0;
+        const limitReq = 6;
 
         async function getAPIData() {
 
@@ -54,9 +55,10 @@
                 arr[i] = new Array(3);
             }
 
-            for (var j = 0; j < data.baskets.length; j++) {
+            for (var j = 0; j < limitReq; j++) {        // j < data.baskets.length
                 var dataNo1 = data.baskets[j].name;
-                getAPIDataDisplay(dataNo1, arr, j, resLength); 
+                getAPIDataDisplay(dataNo1, arr, j, resLength);
+                //setTimeout(getAPIDataDisplay.bind(dataNo1, arr, j, resLength), 300);
             }
         }
         getAPIData();
@@ -77,13 +79,13 @@
             console.log("array = " + arr[j][2]);
             console.log("\n");
 
-            if (asyncCounter == resLength)
+            if (asyncCounter == limitReq)   // asyncCounter == resLength
             {
                 console.log("Array is full!");
                 arr.sort().reverse();
                 console.log(arr);
 
-                for (var i = 0; i < resLength; i++)
+                for (var i = 0; i < limitReq; i++)  // i < resLength
                 {
                     container.innerHTML += '<div class="container-fluid"><div class="row"><div class="col-xs-4"><p id="newContent">' + arr[i][1] +
                         '</p></div><div class="col-xs-4"><p id="newQuote">' + arr[i][0] +

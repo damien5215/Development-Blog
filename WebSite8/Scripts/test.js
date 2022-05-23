@@ -12,7 +12,7 @@ var dateString =
 
 
 async function getIPFunction() {
-    const response = await fetch('http://api.ipify.org/?format=json');
+    const response = await fetch('https://api.ipify.org/?format=json');
     var data = await response.json();
     ipAddress = data.ip;
     saveToAPI(dateString, ipAddress);

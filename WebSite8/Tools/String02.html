@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--<link href="css/StyleSheet.css" rel="stylesheet" />-->
+
+    <style>
+        body {
+            margin: 8px;
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 25px;
+            background-color: White;
+            color: #333;
+            }
+        #text1 {
+            background-color: #333;
+            color: white;
+        }
+        #text2 {
+            background-color: #333;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <h3></h3>
+            </div>
+            <div class="col-sm-10">
+                <p><b>Vertical List to Hoizontal List</b></p>
+                <p>The title is self explanatory.</p>
+
+                <textarea id="text1" rows="18" cols="60" oninput="formatString()">Type Here.</textarea>
+                <textarea id="text2" rows="18" cols="60" readonly="readonly"></textarea>
+            </div>
+            <div class="col-sm-1">
+                <h3></h3>
+            </div>
+        </div><br>
+    </div>
+
+    <br>
+    <br>
+
+    <script>
+
+        //Need HTTPS for this, onclick="copyTextbox()"
+        //function copyTextbox() {
+        //    var copyText = document.getElementById("text2");
+        //    copyText.select();
+        //    navigator.clipboard.writeText(copyText.value);
+        //    console.log("Text copied - " + copyText.value);
+        //}
+
+        function formatString() {
+
+            document.getElementById("text2").innerHTML = '';
+
+            var x = document.getElementById("text1").value;
+            var y = x.replaceAll('\n','\',\'');
+            y = "\'" + y + "\'";
+
+            document.getElementById("text2").innerHTML = y;
+        }
+        formatString();
+    </script>
+
+</body>
+</html>
