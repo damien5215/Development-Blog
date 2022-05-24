@@ -80,7 +80,8 @@
 
         function getFormData() {
             var inputText = document.querySelector('#text1').value;
-            //console.log(inputText);
+            document.getElementById("text2").innerHTML = "LOADING";
+            //console.log("loadng text");
             saveToAPI(inputText);
         }
 
@@ -143,6 +144,7 @@
 
             document.getElementById("text2").innerHTML = arr[0][0];  //read only
             document.getElementById("text1").innerHTML = arr[0][0];  //input
+            //console.log("Text Loaded.");
             console.log(arr);
             console.log("it works!");
             console.log("\n");

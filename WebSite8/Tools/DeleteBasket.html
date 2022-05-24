@@ -48,30 +48,10 @@
                 <h3></h3>
             </div>
             <div class="col-sm-10">
-                <p><b>Vertical List to Hoizontal List</b></p>
-                <!--<p>The title is self explanatory.</p>-->
+                <p><button onclick="deleteBasket()"><b>DELETE</b></button><b> - BASKET FROM PANTRY</b></p>
 
-                <textarea id="text1" rows="18" cols="60" oninput="formatString()">Type Here.</textarea>
-                <textarea id="text2" rows="18" cols="60" readonly="readonly"></textarea>
-            </div>
-            <div class="col-sm-1">
-                <h3></h3>
-            </div>
-        </div><br>
-    </div>
-
-    <!--<br>-->
-    <!--<br>-->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-1">
-                <h3></h3>
-            </div>
-            <div class="col-sm-10">
-                <p><b>Vertical List to Hoizontal List (No Quotes)</b></p>
-                <textarea id="text3" rows="18" cols="60" oninput="formatString2()">Type Here.</textarea>
-                <textarea id="text4" rows="18" cols="60" readonly="readonly"></textarea>
+                <textarea id="text1" rows="18" cols="60" onclick="deleteBasket()">Type Here.</textarea>
+                <!--<textarea id="text2" rows="18" cols="60" readonly="readonly"></textarea>-->
             </div>
             <div class="col-sm-1">
                 <h3></h3>
@@ -89,28 +69,29 @@
         //    console.log("Text copied - " + copyText.value);
         //}
 
-        function formatString() {
+        function deleteBasket(){
+            var input = document.getElementById("text1").value
+            //51.241.11.101
+            console.log(input);
 
-            document.getElementById("text2").innerHTML = '';
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
 
-            var x = document.getElementById("text1").value;
-            var y = x.replaceAll('\n', '\',\'');
-            y = "\'" + y + "\'";
+            var raw = "";
 
-            document.getElementById("text2").innerHTML = y;
+            var requestOptions = {
+                method: 'DELETE',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://getpantry.cloud/apiv1/pantry/5638cc37-8155-4163-ad08-7e4c6de5ee57/basket/" + input, requestOptions)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));
         }
-        formatString();
-
-        function formatString2() {
-
-            document.getElementById("text4").innerHTML = '';
-
-            var x = document.getElementById("text3").value;
-            var y = x.replaceAll('\n', ',');
-            //y = "\'" + y + "\'";
-
-            document.getElementById("text4").innerHTML = y;
-        }
+        
     </script>
 
 </body>
