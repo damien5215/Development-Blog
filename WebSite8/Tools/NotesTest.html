@@ -76,7 +76,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <p><button onclick="getFormData()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b></p>
+                <p><button onclick="startUp()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b></p>
                 <textarea id="text1" rows="25" cols="78">Type Here.</textarea>
             </div>
             <!--<div class="col-sm-12">
@@ -94,6 +94,28 @@
 
 
     <script>
+
+        var flagLoaded = false;
+        const passCode = "51.241.11.101";
+        var inputCode;
+
+        function startUp() {
+
+            inputCode = document.querySelector('#text3').value;
+
+            if (inputCode == passCode) {
+                if (flagLoaded == false) {
+                    getPantryData();
+                    flagLoaded = true;
+                }
+                else {
+                    getFormData();
+                }
+            }
+            else {
+                document.querySelector('#text3').value = "Wrong Code!";
+            }
+        }
 
         const button = document.querySelector('#button01');
 
@@ -170,7 +192,7 @@
             button.disabled = false;
             button.style.color = "black";
         }
-        getPantryData();
+        //getPantryData();
 
     </script>
 
