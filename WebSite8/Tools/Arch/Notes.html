@@ -76,7 +76,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <p><button onclick="startUp()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b></p>
+                <!--<p><button onclick="getFormData()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b></p>-->
+                <p><button type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b></p>
                 <textarea id="text1" rows="25" cols="78">Type Here.</textarea>
             </div>
             <!--<div class="col-sm-12">
@@ -86,7 +87,7 @@
             </div>-->
             <div class="col-sm-6">
                 <!--<p><button onclick="getFormData()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b></p>-->
-                <textarea id="text3" class="textboxCool" rows="1" cols="30">Enter Code</textarea>
+                <textarea id="text3" class="textboxCool" rows="1" cols="30"></textarea>
                 <textarea id="text2" rows="25" cols="78" readonly="readonly"></textarea>
             </div>
         </div><br>
@@ -95,27 +96,8 @@
 
     <script>
 
-        var flagLoaded = false;
-        const passCode = "51.241.11.101";
-        var inputCode;
-
-        function startUp() {
-
-            inputCode = document.querySelector('#text3').value;
-
-            if (inputCode == passCode) {
-                if (flagLoaded == false) {
-                    getPantryData();
-                    flagLoaded = true;
-                }
-                else {
-                    getFormData();
-                }
-            }
-            else {
-                document.querySelector('#text3').value = "Wrong Code!";
-            }
-        }
+        //DISABLED START UP FUNCTION: GET DATA
+        //DISABLED BUTTON
 
         const button = document.querySelector('#button01');
 
