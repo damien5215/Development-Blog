@@ -138,8 +138,15 @@
                     var inputText = document.querySelector('#text1').value;
                     //var inputText = document.getElementById('text1').innerHTML;
 
-                    document.getElementById("text2").innerHTML = "LOADING";
-                    saveToAPI(inputText, inputNum);
+                    if (inputNum == inputText[0]) {
+                        document.getElementById("text2").innerHTML = "LOADING";
+                        saveToAPI(inputText, inputNum);
+                    }
+                    else {
+                        console.log("Can not save, first character doesn't match input number.");
+                    }
+                    //document.getElementById("text2").innerHTML = "LOADING";
+                    //saveToAPI(inputText, inputNum);
                 }
                 else {
                     document.querySelector('#text3').value = "CANT SAVE. WRONG CODE!";
@@ -177,7 +184,6 @@
                 .then(result => console.log(result))
                 .then(setTimeout(getPantryData, 600, inputNum, 1))
                 .catch(error => console.log('error', error));
-                      
         }
 
 
@@ -213,7 +219,6 @@
             button.style.color = "black";
         }
         //getPantryData();
-
         
 
         function btnUp() {
@@ -232,9 +237,7 @@
                 inputNum--;
                 document.querySelector('#text4').value = inputNum;
             }
-
         }
-        
 
     </script>
 
