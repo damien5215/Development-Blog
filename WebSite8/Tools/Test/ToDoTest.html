@@ -88,7 +88,7 @@
                 <p>
                     <button onclick="saveData()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b>
                     <textarea id="text4" class="text5" rows="1" cols="1" maxlength="1">1</textarea><button onclick="btnUp()" type="button" class="btnControl" id="buttonUp"><b>+</b></button><button onclick="btnDown()" type="button" class="btnControl" id="buttonDown"><b>-</b></button>
-                    <button onclick="loadDataCheck()" type="button" id="button02"><b>LOAD</b></button><!--<b> - Load text to API!</b>-->
+                    <button onclick="loadData()" type="button" id="button02"><b>LOAD</b></button><!--<b> - Load text to API!</b>-->
                     <!--<button onclick="saveData()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b>-->
                 </p>
                 <textarea id="text1" rows="25" cols="78"></textarea>
@@ -112,25 +112,9 @@
         //inputCode = document.querySelector('#text3').value;  // inputCode
         //inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
 
-        function loadDataCheck() {
-            
-            if (flagLoaded) {
-                inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
-                loadData();
-            }
-            else {
-                inputCode = document.querySelector('#text3').value;
-                inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
-                //document.querySelector('#text3').value = "****************";
-                document.querySelector('#text3').innerHTML = "****************";
-                loadData();
-            }
-        }
-
-
         function loadData() {
-            //inputCode = document.querySelector('#text3').value;
-            //inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
+            inputCode = document.querySelector('#text3').value;
+            inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
             //document.querySelector('#text1').value = "";  // clear textbox 1
             
             if (inputCode == passCode) {
