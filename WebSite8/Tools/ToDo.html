@@ -220,7 +220,7 @@
         function btnUp() {
             inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
 
-            if (inputNum > 0 && inputNum < 9) {
+            if (inputNum > -1 && inputNum < 9) {
                 inputNum++;
                 document.querySelector('#text4').value = inputNum;
             }
@@ -229,7 +229,7 @@
         function btnDown() {
             inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
 
-            if (inputNum > 1 && inputNum < 10) {
+            if (inputNum > 0 && inputNum < 10) {
                 inputNum--;
                 document.querySelector('#text4').value = inputNum;
             }
