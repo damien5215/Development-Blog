@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0px;
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            }
+
+        #text1 {
+            background-color: #333;
+            color: white;
+            width: 100%;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+        }
+        
+        #textOutput{
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <h3></h3>
+            </div>
+            <div class="col-sm-10">
+                <p><b>Text to HTML</b> - Paste html text into text box and the page will display the text as html, dynamically.</p>
+                <!--<p>This is a dynamic word counter. If copy/paste chunks of text please make sure that every sentence is connected, i.e. no new lines.</p>-->
+                
+                <textarea id="text1" rows="10" cols="110" oninput="dynamicText()">Type Here. <b><span style="color:darkgreen">Yes</span></b>, Type here.</textarea>
+                <!--<textarea id="text2" rows="10" cols="48" readonly="readonly"></textarea>-->
+                <br><br>
+                <p id="textOutput">Output Text</p>
+            </div>
+            <div class="col-sm-1">
+                <h3></h3>
+            </div>
+        </div><br>
+    </div>
+    <div id="textOutput2">
+
+    </div>
+
+    <br>
+    <br>
+
+    <script>
+        function dynamicText() {
+
+            var x = document.getElementById("text1").value;
+
+            //var sentNum = (x.split(".").length - 1);
+            //var wordNum = (x.split(" ").length - 1);
+
+            //var sentNum2 = (x.split("."));
+            //var wordNum2 = (x.split(" "));
+
+            //document.getElementById("textOutput").innerHTML = x;
+            //document.getElementById("textOutput2").textContent = x;
+            document.getElementById("textOutput").innerHTML = x.replace("\n", "<br/>");
+            document.getElementById("textOutput2").textContent = x.replace("\n", "<br/>");
+            //console.log(document.getElementById("textOutput").innerHTML);
+            //console.log(document.getElementById("textOutput2").textContent);
+        }
+        dynamicText();
+
+        //var inputText = 'Hello, my <b>name</b> is...';
+        //document.getElementById("textOutput").innerHTML = inputText;
+    </script>
+
+</body>
+</html>
