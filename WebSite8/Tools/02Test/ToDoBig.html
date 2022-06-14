@@ -20,8 +20,8 @@
             padding-left: 14px;
         }
 
-        p {
-            font-size: 15px;
+        p{
+            font-size:15px;
         }
 
         body {
@@ -49,7 +49,7 @@
             background-color: #333;
             color: white;
             resize: none;
-            text-align: center;
+            text-align:center;
             margin: 0px 10px -8px 200px; /* 2nd number is left margin*/
         }
 
@@ -69,13 +69,13 @@
             /*resize: none;*/
         }
 
-        .btnControl {
-            width: 30px;
+        .btnControl{
+            width:30px;
         }
-
         #button02 {
             margin: 0px 0px 0px 0px; /* 2nd number is left margin*/
         }
+
     </style>
 
 </head>
@@ -91,12 +91,12 @@
                     <button onclick="loadData()" type="button" id="button02"><b>LOAD</b></button><!--<b> - Load text to API!</b>-->
                     <!--<button onclick="saveData()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b>-->
                 </p>
-                <textarea id="text1" rows="25" cols="78"></textarea>
+                <textarea id="text1" rows="39" cols="78"></textarea>
             </div>
             <div class="col-sm-6">
                 <!--<p><textarea id="text4" class="textboxCool" rows="1" cols="2" maxlength="1">1</textarea><button onclick="getFormData()" type="button" id="button01"><b>SAVE</b></button><b> - Save text to API!</b></p>-->
                 <textarea id="text3" class="textboxCool" rows="1" cols="30">Enter Code</textarea><!--<textarea id="text4" class="textboxCool" rows="1" cols="2" maxlength="1">1</textarea>-->
-                <textarea id="text2" rows="25" cols="78" readonly="readonly"></textarea>
+                <textarea id="text2" rows="39" cols="78" readonly="readonly"></textarea>
             </div>
         </div><br>
     </div>
@@ -108,8 +108,6 @@
         var inputCode;
         var inputNum;
         const button = document.querySelector('#button01');
-        const buttonUp = document.querySelector('#text2');
-
         //https://getpantry.cloud/apiv1/pantry/881db797-2ba5-4f0a-9f73-30dac2253ca8/basket/data1
         //inputCode = document.querySelector('#text3').value;  // inputCode
         //inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
@@ -118,7 +116,7 @@
             inputCode = document.querySelector('#text3').value;
             inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
             //document.querySelector('#text1').value = "";  // clear textbox 1
-
+            
             if (inputCode == passCode) {
                 flagLoaded = true;
                 getPantryData(inputNum);
@@ -217,26 +215,21 @@
             button.style.color = "black";
         }
         //getPantryData();
-
+        
 
         function btnUp() {
             inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
 
-            if (inputNum > 0 && inputNum < 9) {
+            if (inputNum > -1 && inputNum < 9) {
                 inputNum++;
                 document.querySelector('#text4').value = inputNum;
-            }
-
-            if (inputNum == 'F') {
-                buttonUp.style.fontSize = '15px';
-                buttonUp.style.width = '600px';
             }
         }
 
         function btnDown() {
             inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
 
-            if (inputNum > 1 && inputNum < 10) {
+            if (inputNum > 0 && inputNum < 10) {
                 inputNum--;
                 document.querySelector('#text4').value = inputNum;
             }
