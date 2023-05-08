@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    
+
     <br>
     <br>
     <div class="container">
@@ -45,7 +45,7 @@
             <div class="col-sm-10">
                 <p><b>Text to HTML</b> - Paste html text into text box and the page will display the text as html, dynamically.</p>
                 <!--<p>This is a dynamic word counter. If copy/paste chunks of text please make sure that every sentence is connected, i.e. no new lines.</p>-->
-                
+
                 <textarea id="text1" rows="10" cols="110" oninput="dynamicText()">Type Here. <b><span style="color:darkgreen">Yes</span></b>, Type here.</textarea>
                 <!--<textarea id="text2" rows="10" cols="48" readonly="readonly"></textarea>-->
                 <br><br>
@@ -56,6 +56,11 @@
             </div>
         </div><br>
     </div>
+
+    <div>
+        <p id="textOutput3">Output Text</p>
+    </div>
+
     <div id="textOutput2">
 
     </div>
@@ -77,14 +82,15 @@
             //document.getElementById("textOutput").innerHTML = x;
             //document.getElementById("textOutput2").textContent = x;
             document.getElementById("textOutput").innerHTML = x.replace("\n", "<br/>");
+            document.getElementById("textOutput3").innerHTML = x.replace("\n", "<br/>");
             document.getElementById("textOutput2").textContent = x.replace("\n", "<br/>");
             //console.log(document.getElementById("textOutput").innerHTML);
             //console.log(document.getElementById("textOutput2").textContent);
         }
         dynamicText();
 
-        //var inputText = 'Hello, my <b>name</b> is...';
-        //document.getElementById("textOutput").innerHTML = inputText;
+            //var inputText = 'Hello, my <b>name</b> is...';
+            //document.getElementById("textOutput").innerHTML = inputText;
     </script>
 
 </body>

@@ -108,7 +108,7 @@
         var inputCode;
         var inputNum;
         const button = document.querySelector('#button01');
-        //https://getpantry.cloud/apiv1/pantry/881db797-2ba5-4f0a-9f73-30dac2253ca8/basket/data1
+        //https://getpantry.cloud/apiv1/pantry/881db797-2ba5-4f0a-9f73-30dac2253ca8/basket/data1    //6d5ff1ab-8d2d-4def-b0ef-5e7c4773ef26
         //inputCode = document.querySelector('#text3').value;  // inputCode
         //inputNum = document.querySelector('#text4').value;  // data item number (1, 2, 3, etc)
 
@@ -175,7 +175,8 @@
                 redirect: 'follow'
             };
 
-            fetch("https://getpantry.cloud/apiv1/pantry/881db797-2ba5-4f0a-9f73-30dac2253ca8/basket/data" + inputNum, requestOptions)
+            //6d5ff1ab-8d2d-4def-b0ef-5e7c4773ef26
+            fetch("https://getpantry.cloud/apiv1/pantry/6d5ff1ab-8d2d-4def-b0ef-5e7c4773ef26/basket/data" + inputNum, requestOptions)
                 .then(response => response.text())
                 .then(result => console.log(result))
                 .then(setTimeout(getPantryData, 600, inputNum, 1))
@@ -193,7 +194,7 @@
                 arr[i] = new Array(3);
             }
 
-            const response = await fetch('https://getpantry.cloud/apiv1/pantry/881db797-2ba5-4f0a-9f73-30dac2253ca8/basket/data' + inputNum);
+            const response = await fetch('https://getpantry.cloud/apiv1/pantry/6d5ff1ab-8d2d-4def-b0ef-5e7c4773ef26/basket/data' + inputNum);
             var data = await response.json();
 
             arr[0][0] = data.item1;

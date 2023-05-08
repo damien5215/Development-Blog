@@ -48,8 +48,8 @@
                 <h3></h3>
             </div>
             <div class="col-sm-10">
-                <!--<p><button onclick="createBasket()"><b>Create</b></button><b> - BASKET IN PANTRY</b></p>-->
-                <p><button><b>Create</b></button><b> - BASKET IN PANTRY</b></p>
+                <p><button onclick="createBasket()"><b>Create</b></button><b> - BASKET IN PANTRY</b></p>
+                <!--<p><button><b>Create</b></button><b> - BASKET IN PANTRY</b></p>-->
 
 
                 <textarea id="text1" rows="18" cols="60">Type Here.</textarea>
@@ -77,10 +77,11 @@
             //console.log(input);
 
             var myHeaders = new Headers();
+            var num = 5;
             myHeaders.append("Content-Type", "application/json");
 
             var raw = JSON.stringify({
-                "item1": "test0",
+                "item1": num,//"3",
                 "testPayload": true,
                 "keysLength": 3
             });
@@ -92,7 +93,7 @@
                 redirect: 'follow'
             };
 
-            fetch("https://getpantry.cloud/apiv1/pantry/881db797-2ba5-4f0a-9f73-30dac2253ca8/basket/data0", requestOptions)
+            fetch("https://getpantry.cloud/apiv1/pantry/6d5ff1ab-8d2d-4def-b0ef-5e7c4773ef26/basket/data" + num, requestOptions)
                 .then(response => response.text())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
